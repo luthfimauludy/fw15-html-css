@@ -1,0 +1,198 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Poppins:wght@400&display=swap"
+      rel="stylesheet"
+    />
+    <style>
+      body {
+        margin: 0;
+        font-family: "Poppins", sans-serif;
+      }
+      .wrapper {
+        display: flex;
+        height: 100vh;
+      }
+      .img-section {
+        flex: 1;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        background-color: #3366ff;
+      }
+      .holder {
+        position: relative;
+      }
+      .dissolve {
+        background: linear-gradient(
+          180deg,
+          rgba(51, 102, 255, 0) 10%,
+          #3366ff 75%
+        );
+        position: absolute;
+        width: 400px;
+        height: 150px;
+        bottom: 0;
+      }
+      .banner1 {
+        width: 400px;
+      }
+      .form-section {
+        width: 300px;
+        padding-left: 70px;
+        padding-top: 70px;
+        padding-right: 70px;
+      }
+      .logo {
+        height: 50px;
+      }
+      .title {
+        margin: 10px 0px;
+      }
+      .desc {
+        font-size: 13px;
+        margin-bottom: 40px;
+      }
+      .desc a {
+        text-decoration: none;
+        color: #3366ff;
+        font-weight: bold;
+      }
+      input::placeholder {
+        opacity: 0.5;
+      }
+      input[type="text"],
+      input[type="email"],
+      input[type="password"] {
+        height: 40px;
+        width: 300px;
+        margin-bottom: 10px;
+        border: 1px solid #c1c5d0;
+        border-radius: 10px;
+        padding: 0 20px;
+        box-sizing: border-box;
+        outline: none;
+      }
+      .toggleable-password {
+        width: 300px;
+        position: relative;
+      }
+      .toggleable-password button {
+        position: absolute;
+        right: 10px;
+        top: 8px;
+        background: unset;
+        border: unset;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+      }
+      .checkbox {
+        margin: 20px 0px;
+        font-size: 15px;
+      }
+      input[type="checkbox"] {
+        display: none;
+      }
+      .checkmarking {
+        display: inline-block;
+        width: 17px;
+        height: 17px;
+        border: 2px solid #3366ff;
+        border-radius: 4px;
+        position: relative;
+      }
+      input[type="checkbox"]:checked ~ .checkmarking {
+        background-color: #3366ff;
+      }
+      input[type="checkbox"]:checked ~ .checkmarking::after {
+        position: absolute;
+        top: -3px;
+        left: 1px;
+        content: "\2713";
+        width: 17px;
+        height: 17px;
+        color: white;
+      }
+      .submit {
+        text-align: center;
+      }
+      .submit button {
+        width: 300px;
+        height: 50px;
+        font-size: 15px;
+        border: none;
+        border-radius: 10px;
+        background-color: #3366ff;
+        color: #fff;
+      }
+      @media screen and (max-width: 460px) {
+        .img-section {
+          display: none;
+        }
+      }
+    </style>
+    <title>Sign Up</title>
+  </head>
+  <body>
+    <div class="wrapper">
+      <div class="img-section">
+        <div class="holder">
+          <img class="banner1" src="/assets/toyFaces.png" alt="Toy Faces" />
+          <div class="dissolve"></div>
+        </div>
+      </div>
+      <div class="form-section">
+        <div>
+          <img class="logo" src="/assets/logo.png" alt="logo" />
+        </div>
+        <div>
+          <h2 class="title">Sign Up</h2>
+          <div class="desc">
+            Already have an account?
+            <a href="/signin.html">Log In</a>
+          </div>
+        </div>
+        <div>
+          <form>
+            <div>
+              <input type="text" placeholder="Full Name" />
+            </div>
+            <div>
+              <input type="email" placeholder="Email" />
+            </div>
+            <div class="toggleable-password">
+              <input type="password" placeholder="Password" />
+              <button>
+                <img src="/assets/eye.png" />
+              </button>
+            </div>
+            <div class="toggleable-password">
+              <input type="password" placeholder="Confirm Password" />
+              <button>
+                <img src="/assets/eye.png" />
+              </button>
+            </div>
+            <div class="checkbox">
+              <label>
+                <input type="checkbox" />
+                <span class="checkmarking"></span>
+                Accept terms and condition
+              </label>
+            </div>
+            <div class="submit">
+              <button type="submit">Sign Up</button>
+            </div>
+          </form>
+        </div>
+      </div>
+      <div></div>
+    </div>
+  </body>
+</html>

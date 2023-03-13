@@ -1,0 +1,375 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Poppins:wght@400&display=swap"
+      rel="stylesheet"
+    />
+    <script src="https://cdn.tailwindcss.com"></script>
+    <style>
+      body {
+        margin: 0;
+        font-family: "Poppins", sans-serif;
+      }
+      .bg {
+        background: #f4f7ff;
+        height: 220vh;
+      }
+
+      /* Navbar */
+      .nav {
+        display: flex;
+        justify-content: space-between;
+        background: #fff;
+        padding: 10px 50px;
+      }
+      .menu {
+        display: flex;
+        padding-top: 20px;
+      }
+      .menu a {
+        text-decoration: none;
+        font-size: 14px;
+        font-weight: 600;
+      }
+      .create-event {
+        padding-left: 50px;
+        padding-right: 50px;
+      }
+      .create-event a,
+      .location a {
+        color: #373a42;
+      }
+
+      /* Footer Start */
+      .footer {
+        display: flex;
+        justify-content: center;
+        height: 308px;
+      }
+      .col-1 {
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        padding-right: 50px;
+      }
+      .col-1 .title {
+        margin-bottom: 10px;
+      }
+      .col-2,
+      .col-3 {
+        padding: 0px 50px;
+      }
+      .col-4 {
+        padding-left: 50px;
+      }
+      .head-text {
+        font-weight: 600;
+        margin-bottom: 15px;
+      }
+      .footer-text {
+        color: #c1c5d0;
+      }
+      .sub-text {
+        margin-bottom: 10px;
+      }
+      .bottom-text {
+        font-weight: 600;
+        font-size: 16px;
+        color: #5a7184;
+      }
+    </style>
+    <title>Profile</title>
+  </head>
+  <body>
+    <div class="bg">
+      <!-- Navbar start -->
+      <nav class="nav">
+        <div class="logo">
+          <img src="/assets/logo.png" alt="logo" />
+        </div>
+        <div class="menu">
+          <div class="home">
+            <a href="/home.html">Home</a>
+          </div>
+          <div class="create-event">
+            <a href="/create-event.html">Create Event</a>
+          </div>
+          <div class="location">
+            <a href="/location.html">Location</a>
+          </div>
+        </div>
+        <div class="profile">
+          <img src="/assets/profile.png" alt="Profile Picture" />
+        </div>
+      </nav>
+      <!-- Navbar End -->
+
+      <!-- Main Content Start -->
+      <!-- Menu Start -->
+      <div class="flex justify-center mb-[100px]">
+        <div class="text-sm ml-16 mr-14 mt-12 min-w-[230px]">
+          <div class="flex h-14 mb-12">
+            <img src="/assets/avatar.png" alt="Avatar" />
+            <div class="flex flex-col justify-between ml-3.5 align-center">
+              <p class="text-sm font-semibold">Jhon Tomson</p>
+              <p class="text-xs self-end">Entrepreneur, ID</p>
+            </div>
+          </div>
+          <div class="font-semibold">
+            <div>
+              <div class="flex">
+                <div class="mr-6">
+                  <img src="/assets/icon-profile.png" alt="Icon Profile" />
+                </div>
+                <div>
+                  <div class="mb-8">Profile</div>
+                  <div class="flex">
+                    <div class="mr-6">
+                      <img src="/assets/icon-card.png" alt="Icon Card" />
+                    </div>
+                    <div class="mb-8">Card</div>
+                  </div>
+                  <div class="flex">
+                    <div class="mr-6">
+                      <img
+                        src="/assets/icon-edit-profile.png"
+                        alt="Icon Edit Profile"
+                      />
+                    </div>
+                    <div class="mb-8">Edit Profile</div>
+                  </div>
+                  <div class="flex">
+                    <div class="mr-6">
+                      <img
+                        src="/assets/icon-change-password.png"
+                        alt="Icon Change Password"
+                      />
+                    </div>
+                    <div class="mb-8">Change Password</div>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div>
+              <div>
+                <div class="flex">
+                  <div class="mr-6">
+                    <img src="/assets/icon-my-booking.png" alt="" />
+                  </div>
+                  <div>
+                    <div class="mb-8">My Booking</div>
+                  </div>
+                </div>
+                <div class="flex">
+                  <div class="mr-6">
+                    <img src="/assets/icon-my-wishlist.png" alt="" />
+                  </div>
+                  <div>
+                    <div class="mb-8">My Wishlist</div>
+                  </div>
+                </div>
+                <div class="flex">
+                  <div class="mr-6">
+                    <img src="/assets/icon-settings.png" alt="" />
+                  </div>
+                  <div>
+                    <div class="mb-8">Settings</div>
+                  </div>
+                </div>
+                <div class="flex">
+                  <div class="mr-6">
+                    <img src="/assets/icon-logout.png" alt="" />
+                  </div>
+                  <div>
+                    <div class="mb-8">Logout</div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <!-- Menu End -->
+
+        <!-- Profile Detail Start -->
+        <div class="flex bg-white rounded-[30px] mt-12 p-12 mr-[70px]">
+          <div>
+            <div class="mb-12 text-xl font-semibold">Profile</div>
+            <div>
+              <div class="flex items-center mb-[33px]">
+                <div class="min-w-[160px]">Name</div>
+                <div
+                  class="text-sm border rounded-2xl w-[315px] py-[17px] pl-[25px]"
+                >
+                  <input type="text" placeholder="Jhon Tomson" />
+                </div>
+              </div>
+            </div>
+            <div>
+              <div class="flex items-center mb-[50px]">
+                <div class="min-w-[160px]">Username</div>
+                <div class="text-sm text-[#777777]">
+                  <p>@jhont0</p>
+                </div>
+                <div class="text-[#3366FF] ml-[15px] underline decoration-auto">
+                  <a href="/edit.html">Edit</a>
+                </div>
+              </div>
+            </div>
+            <div>
+              <div class="flex items-center mb-[50px]">
+                <div class="min-w-[160px]">Email</div>
+                <div class="text-sm text-[#777777]">
+                  <p>jhont0@mail.com</p>
+                </div>
+                <div class="text-[#3366FF] ml-[15px] underline decoration-auto">
+                  <a href="/edit.html">Edit</a>
+                </div>
+              </div>
+            </div>
+            <div>
+              <div class="flex items-center mb-[50px]">
+                <div class="min-w-[160px]">Phone Number</div>
+                <div class="text-sm text-[#777777]">
+                  <p>081234567890</p>
+                </div>
+                <div class="text-[#3366FF] ml-[15px] underline decoration-auto">
+                  <a href="/edit.html">Edit</a>
+                </div>
+              </div>
+            </div>
+            <div>
+              <div class="flex items-center mb-[33px]">
+                <div class="min-w-[160px]">Gender</div>
+                <div class="flex text-sm text-[#777777]">
+                  <input type="radio" checked />
+                  <p class="ml-2.5 mr-[50px]">Male</p>
+                  <input type="radio" />
+                  <p class="ml-2.5">Female</p>
+                </div>
+              </div>
+            </div>
+            <div>
+              <div class="flex items-center mb-4">
+                <div class="min-w-[160px]">Profession</div>
+                <div
+                  class="relative text-sm border rounded-2xl w-[315px] py-[17px] pl-[25px]"
+                >
+                  <input type="text" placeholder="Entrepreneur" />
+                  <button class="absolute flex top-4 right-5">
+                    <img src="/assets/accordion.png" alt="Accordion" />
+                  </button>
+                </div>
+              </div>
+            </div>
+            <div>
+              <div class="flex items-center mb-[33px]">
+                <div class="min-w-[160px]">Nasionality</div>
+                <div
+                  class="relative text-sm border rounded-2xl w-[315px] py-[17px] p-[25px]"
+                >
+                  <input type="text" placeholder="Indonesia" />
+                  <button class="absolute flex top-4 right-5">
+                    <img src="/assets/accordion.png" alt="Accordion" />
+                  </button>
+                </div>
+              </div>
+            </div>
+            <div>
+              <div class="flex items-center mb-[50px]">
+                <div class="min-w-[160px]">Phone Number</div>
+                <div class="flex text-sm text-[#777777]">
+                  <p class="mr-1">24</p>
+                  <p class="mr-1">/</p>
+                  <p class="mr-1">10</p>
+                  <p class="mr-1">/</p>
+                  <p>2000</p>
+                </div>
+                <div class="text-[#3366FF] ml-[15px] underline decoration-auto">
+                  <a href="/edit.html">Edit</a>
+                </div>
+              </div>
+            </div>
+            <button
+              class="w-[315px] h-[61px] rounded-2xl bg-[#3366FF] text-white font-semibold"
+            >
+              Save
+            </button>
+          </div>
+          <div
+            class="h-[303px] ml-[50px] pl-[50px] mt-[76px] border-l border-[#C1C5D040]"
+          >
+            <div class="w-64">
+              <div class="ml-[59px] mb-[50px]">
+                <img src="/assets/photo-profile.png" alt="Photo Profile" />
+              </div>
+              <button
+                class="w-64 h-10 mb-[25px] rounded-lg border-solid border border-[#3366FF] text-sm text-[#3366FF] font-semibold tracking-widest"
+              >
+                Choose Photo
+              </button>
+            </div>
+            <div class="text-xs text-[#373A42BF]">
+              <p class="mb-[15px]">Image size: max, 2 MB</p>
+              <p>Image formats: .JPG, .JPEG, .PNG</p>
+            </div>
+          </div>
+        </div>
+      </div>
+      <!-- Profile Detail End -->
+      <!-- Main Content End -->
+
+      <!-- Footer Start -->
+      <div class="footer">
+        <div class="col-1">
+          <div class="top-text">
+            <div>
+              <img src="/assets/logo.png" alt="logo" />
+            </div>
+            <div class="title">Find events you love with our</div>
+            <div>
+              <img src="/assets/icon.png" alt="icon" />
+            </div>
+          </div>
+          <div class="bottom-text">© 2020 Wetick All Rights Reserved</div>
+        </div>
+        <div class="col-2">
+          <div class="head-text">Wetick</div>
+          <div class="footer-text">
+            <div class="sub-text">About Us</div>
+            <div class="sub-text">Features</div>
+            <div class="sub-text">Blog</div>
+            <div class="sub-text">Payments</div>
+            <div class="sub-text">Mobile App</div>
+          </div>
+        </div>
+        <div class="col-3">
+          <div class="head-text">Features</div>
+          <div class="footer-text">
+            <div class="sub-text">Booking</div>
+            <div class="sub-text">Create Event</div>
+            <div class="sub-text">Discover</div>
+            <div class="sub-text">Register</div>
+          </div>
+        </div>
+        <div class="col-4">
+          <div class="head-text">Company</div>
+          <div class="footer-text">
+            <div class="sub-text">Partnership</div>
+            <div class="sub-text">Help</div>
+            <div class="sub-text">Blog</div>
+            <div class="sub-text">Term of Service</div>
+            <div class="sub-text">Sitemap</div>
+          </div>
+        </div>
+      </div>
+      <!-- Footer End -->
+      <div></div>
+    </div>
+  </body>
+</html>

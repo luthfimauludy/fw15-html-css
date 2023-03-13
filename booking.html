@@ -1,0 +1,498 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Poppins:wght@400&display=swap"
+      rel="stylesheet"
+    />
+    <title>Booking</title>
+    <style>
+      body {
+        margin: 0;
+        font-family: "Poppins", sans-serif;
+      }
+      .bg {
+        background: #f4f7ff;
+        height: 180vh;
+      }
+
+      /* Navbar */
+      .nav {
+        display: flex;
+        justify-content: space-between;
+        background: #fff;
+        padding: 10px 50px;
+      }
+      .menu {
+        display: flex;
+        padding-top: 20px;
+      }
+      .menu a {
+        text-decoration: none;
+      }
+      .home a {
+        color: #3366ff;
+      }
+      .create-event {
+        padding-left: 50px;
+        padding-right: 50px;
+      }
+      .create-event a,
+      .location a {
+        color: #373a42;
+      }
+
+      .wrapper {
+        display: flex;
+        justify-content: center;
+        margin: 50px 80px 80px 80px;
+        background: #fff;
+        border-radius: 20px;
+        padding: 50px 50px 50px 0px;
+      }
+
+      /* Banner */
+      .banner {
+        width: 600px;
+        height: 650px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+      }
+      .banner img {
+        width: 400px;
+      }
+
+      /* Ticket Price */
+      .ticket-price {
+        width: 400px;
+        height: 700px;
+      }
+      .header {
+        height: 50px;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+      }
+      .text-header {
+        font-size: 20px;
+        font-weight: 600;
+      }
+      .byprice {
+        display: flex;
+        align-items: center;
+      }
+      .text-byprice {
+        font-size: 12px;
+        font-weight: 600;
+        color: #fc1055;
+      }
+      .byprice > .icon {
+        width: 50px;
+      }
+      .row1,
+      .row2,
+      .row3 {
+        max-width: 370px;
+        display: flex;
+      }
+      .row3 {
+        border-bottom: 1px solid #e0e4f3;
+        padding-bottom: 10px;
+      }
+      .box-logo {
+        min-width: 60px;
+        margin-right: 10px;
+        margin-top: 20px;
+        height: 100%;
+        justify-items: start;
+      }
+      .logo-ticket {
+        width: 60px;
+        height: 50px;
+      }
+      .box-ticket {
+        min-width: 300px;
+      }
+      .price-section {
+        display: flex;
+        justify-content: space-between;
+      }
+      .right-section {
+        text-align: center;
+      }
+      .quantity-section {
+        margin-top: 10px;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+      }
+      .quantity-text {
+        font-size: 12px;
+        font-weight: 600;
+        margin: 0;
+      }
+      .quantity-button {
+        display: flex;
+        justify-content: space-evenly;
+        align-items: center;
+      }
+      .btn {
+        width: 33px;
+        height: 30px;
+        padding: 5px;
+        background: none;
+        border: 1px solid #c1c5d0;
+        border-radius: 10px;
+      }
+      .border-color-qty {
+        color: #c1c5d0;
+      }
+      .ticket-desc {
+        display: flex;
+        justify-content: space-between;
+        max-width: 370px;
+        margin-bottom: 30px;
+      }
+      .left-text {
+        font-size: 14px;
+        font-weight: 600;
+      }
+      .right-text {
+        font-size: 14px;
+        font-weight: 600;
+        text-align: right;
+        color: #3366ff;
+      }
+      .bold {
+        font-size: 14px;
+        font-weight: bold;
+        margin-bottom: 8px;
+      }
+      .ml-2 {
+        margin-left: 10px;
+      }
+      .mt-0 {
+        font-size: 12px;
+        margin-top: 0;
+        color: #bdc0c4;
+      }
+      .btn-payment {
+        min-width: 315px;
+        height: 55px;
+        font-size: 14px;
+        font-weight: 600;
+        border: none;
+        border-radius: 10px;
+        background-color: #3366ff;
+        color: #fff;
+      }
+
+      /* Footer */
+      .footer {
+        display: flex;
+        justify-content: center;
+        height: 308px;
+      }
+      .col-1 {
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        padding-right: 50px;
+      }
+      .col-1 .title {
+        margin-bottom: 10px;
+      }
+      .col-2,
+      .col-3 {
+        padding: 0px 50px;
+      }
+      .col-4 {
+        padding-left: 50px;
+      }
+      .head-text {
+        font-weight: 600;
+        margin-bottom: 15px;
+      }
+      .footer-text {
+        color: #c1c5d0;
+      }
+      .sub-text {
+        margin-bottom: 10px;
+      }
+      .bottom-text {
+        font-weight: 600;
+        font-size: 16px;
+        color: #5a7184;
+      }
+
+      /* Responsive 460px */
+      @media screen and (max-width: 460px) {
+        .bg {
+          height: max-content;
+          background: #fff;
+        }
+        .nav {
+          width: 100%;
+          flex-direction: column;
+        }
+        .menu {
+          flex-direction: column;
+          align-items: center;
+        }
+        .create-event {
+          padding: 0;
+        }
+        .profile {
+          display: flex;
+          justify-content: center;
+        }
+        .wrapper {
+          width: 100%;
+          height: 100%;
+          flex-direction: column;
+          margin: 0;
+          padding: 0;
+        }
+        .banner {
+          width: 400px;
+          height: 330px;
+        }
+        .ticket-price {
+          margin-left: 20px;
+          margin-bottom: 50px;
+        }
+        .btn-payment {
+          width: 370px;
+        }
+        .footer {
+          height: 100%;
+          flex-direction: column;
+          margin-left: 20px;
+        }
+        .col-1,
+        .col-2,
+        .col-3,
+        .col-4 {
+          padding: 0;
+          margin-bottom: 50px;
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <div class="bg">
+      <nav class="nav">
+        <div class="logo">
+          <img src="/assets/logo.png" alt="logo" />
+        </div>
+        <div class="menu">
+          <div class="home">
+            <a href="/home.html">Home</a>
+          </div>
+          <div class="create-event">
+            <a href="/create-event.html">Create Event</a>
+          </div>
+          <div class="location">
+            <a href="/location.html">Location</a>
+          </div>
+        </div>
+        <div class="profile">
+          <img src="/assets/profile.png" alt="Profile Picture" />
+        </div>
+      </nav>
+      <div class="wrapper">
+        <div class="banner">
+          <div>
+            <img src="/assets/banner.png" alt="banner" />
+          </div>
+        </div>
+        <div class="ticket-price">
+          <div class="header">
+            <div class="text-header">Tickets</div>
+            <div class="byprice">
+              <p class="text-byprice">BY PRICE</p>
+              <img class="icon" src="/assets/byprice-icon.png" alt="Icon" />
+            </div>
+          </div>
+          <div class="ticket-section">
+            <div class="row1">
+              <div class="box-logo">
+                <div>
+                  <img
+                    class="logo-ticket"
+                    src="/assets/ticket1.png"
+                    alt="Ticket 1"
+                  />
+                </div>
+              </div>
+              <div class="box-ticket">
+                <div class="price-section">
+                  <div class="left-section">
+                    <p class="bold">SECTION REG, ROW 1</p>
+                    <p class="mt-0">12 Seats available</p>
+                  </div>
+                  <div class="right-section">
+                    <p class="bold">$15</p>
+                    <p class="mt-0">per person</p>
+                  </div>
+                </div>
+                <div class="quantity-section">
+                  <div>
+                    <p class="quantity-text">Quantity</p>
+                  </div>
+                  <div class="quantity-button">
+                    <button type="button" class="btn border-color-qty">
+                      -
+                    </button>
+                    <p class="ml-2">0</p>
+                    <button type="button" class="ml-2 btn border-color-qty">
+                      +
+                    </button>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="row2">
+              <div class="box-logo">
+                <div>
+                  <img
+                    class="logo-ticket"
+                    src="/assets/ticket2.png"
+                    alt="Ticket 2"
+                  />
+                </div>
+              </div>
+              <div class="box-ticket">
+                <div class="price-section">
+                  <div class="left-section">
+                    <p class="bold">SECTION VIP, ROW 2</p>
+                    <p class="mt-0">9 Seats available</p>
+                  </div>
+                  <div class="right-section">
+                    <p class="bold">$35</p>
+                    <p class="mt-0">per person</p>
+                  </div>
+                </div>
+                <div class="quantity-section">
+                  <div>
+                    <p class="quantity-text">Quantity</p>
+                  </div>
+                  <div class="quantity-button">
+                    <button type="button" class="btn border-color-qty">
+                      -
+                    </button>
+                    <p class="ml-2">2</p>
+                    <button type="button" class="ml-2 btn">+</button>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="row3">
+              <div class="box-logo">
+                <div>
+                  <img
+                    class="logo-ticket"
+                    src="/assets/ticket3.png"
+                    alt="Ticket 3"
+                  />
+                </div>
+              </div>
+              <div class="box-ticket">
+                <div class="price-section">
+                  <div class="left-section">
+                    <p class="bold">SECTION VVIP, ROW 3</p>
+                    <p class="mt-0">6 Seats available</p>
+                  </div>
+                  <div class="right-section">
+                    <p class="bold">$50</p>
+                    <p class="mt-0">per person</p>
+                  </div>
+                </div>
+                <div class="quantity-section">
+                  <div>
+                    <p class="quantity-text">Quantity</p>
+                  </div>
+                  <div class="quantity-button">
+                    <button type="button" class="btn border-color-qty">
+                      -
+                    </button>
+                    <p class="ml-2">0</p>
+                    <button type="button" class="ml-2 btn border-color-qty">
+                      +
+                    </button>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="ticket-desc">
+            <div class="left-text">
+              <p>Ticket Section</p>
+              <p>Quantity</p>
+              <p>Total Payment</p>
+            </div>
+            <div class="right-text">
+              <p>VIP</p>
+              <p>2</p>
+              <p>$70</p>
+            </div>
+          </div>
+          <div>
+            <a href="/payment.html">
+              <button class="btn-payment" type="submit">Checkout</button>
+            </a>
+          </div>
+        </div>
+      </div>
+      <div class="footer">
+        <div class="col-1">
+          <div class="top-text">
+            <div>
+              <img src="/assets/logo.png" alt="logo" />
+            </div>
+            <div class="title">Find events you love with our</div>
+            <div>
+              <img src="/assets/icon.png" alt="icon" />
+            </div>
+          </div>
+          <div class="bottom-text">© 2020 Wetick All Rights Reserved</div>
+        </div>
+        <div class="col-2">
+          <div class="head-text">Wetick</div>
+          <div class="footer-text">
+            <div class="sub-text">About Us</div>
+            <div class="sub-text">Features</div>
+            <div class="sub-text">Blog</div>
+            <div class="sub-text">Payments</div>
+            <div class="sub-text">Mobile App</div>
+          </div>
+        </div>
+        <div class="col-3">
+          <div class="head-text">Features</div>
+          <div class="footer-text">
+            <div class="sub-text">Booking</div>
+            <div class="sub-text">Create Event</div>
+            <div class="sub-text">Discover</div>
+            <div class="sub-text">Register</div>
+          </div>
+        </div>
+        <div class="col-4">
+          <div class="head-text">Company</div>
+          <div class="footer-text">
+            <div class="sub-text">Partnership</div>
+            <div class="sub-text">Help</div>
+            <div class="sub-text">Blog</div>
+            <div class="sub-text">Term of Service</div>
+            <div class="sub-text">Sitemap</div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </body>
+</html>

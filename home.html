@@ -1,0 +1,140 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Poppins:wght@400&display=swap"
+      rel="stylesheet"
+    />
+    <script src="https://cdn.tailwindcss.com"></script>
+    <style>
+      body {
+        margin: 0;
+        font-family: "Poppins", sans-serif;
+      }
+      .bg {
+        background: #f4f7ff;
+        height: 220vh;
+      }
+
+      /* Navbar */
+      .nav {
+        display: flex;
+        justify-content: space-between;
+        background: #fff;
+        padding: 10px 50px;
+      }
+      .menu {
+        display: flex;
+        padding-top: 20px;
+      }
+      .menu a {
+        text-decoration: none;
+        font-size: 14px;
+        font-weight: 600;
+      }
+      .home {
+        max-height: 30px;
+        border-bottom: 1px solid #3366ff;
+      }
+      .home a {
+        color: #3366ff;
+      }
+      .create-event {
+        padding-left: 50px;
+        padding-right: 50px;
+      }
+      .create-event a,
+      .location a {
+        color: #373a42;
+      }
+      .btn-nav {
+        display: flex;
+      }
+      .login {
+        padding-top: 20px;
+        padding-right: 50px;
+        font-size: 14px;
+        font-weight: 600;
+      }
+      .signup {
+        text-align: center;
+        padding-top: 10px;
+        font-size: 14px;
+      }
+      .signup button {
+        width: 169px;
+        height: 40px;
+        border: none;
+        border-radius: 10px;
+        color: #fff;
+        background-color: #3366ff;
+      }
+    </style>
+    <title>Home</title>
+  </head>
+  <body>
+    <div>
+      <!-- Navbar start -->
+      <nav class="nav">
+        <div class="logo">
+          <img src="/assets/logo.png" alt="logo" />
+        </div>
+        <div class="menu">
+          <div class="home">
+            <a href="/home.html">Home</a>
+          </div>
+          <div class="create-event">
+            <a href="/create-event.html">Create Event</a>
+          </div>
+          <div class="location">
+            <a href="/location.html">Location</a>
+          </div>
+        </div>
+        <div class="btn-nav">
+          <a class="login" href="/signin.html">Log In</a>
+          <div class="signup">
+            <a href="/signup.html">
+              <button type="submit">Sign Up</button>
+            </a>
+          </div>
+        </div>
+      </nav>
+      <!-- Navbar End -->
+      <!-- Header Start -->
+      <div class="flex justify-center items-center h-96 bg-[#3366FF]">
+        <div class="w-[600px]">
+          <p class="text-[64px] text-white">Find events you love with our</p>
+          <div class="flex items-center h-[75px] bg-white border rounded-lg">
+            <div class="flex items-center w-[291px] ml-[25px]">
+              <img class="w-6 h-6" src="/assets/search.png" alt="Search Icon" />
+              <p class="text-xs ml-[15px]">Search Event...</p>
+            </div>
+            <div
+              class="flex items-center pl-5 border-l border-[rgba(193, 197, 208, 0.25)]"
+            >
+              <img class="w-6 h-6" src="/assets/map-pin2.png" alt="Map Pin" />
+              <input
+                class="w-[113px] text-xs ml-[15px] border-0"
+                placeholder="Where?"
+              />
+              <div>
+                <button
+                  class="w-11 h-11 bg-[#FF3D71] text-white border rounded-[10px]"
+                >
+                  &rarr;
+                </button>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div></div>
+      </div>
+      <!-- Header End -->
+    </div>
+  </body>
+</html>
