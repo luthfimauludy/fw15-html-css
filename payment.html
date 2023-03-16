@@ -4,60 +4,70 @@
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Payment</title>
+
+    <!-- Fonts -->
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link
-      href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;700&display=swap"
+      href="https://fonts.googleapis.com/css2?family=Poppins:wght@400&display=swap"
       rel="stylesheet"
     />
-    <title>Payment</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+
+    <!-- Feather Icons -->
+    <script src="https://unpkg.com/feather-icons"></script>
+
+    <!-- Manual Styling -->
     <style>
       body {
         margin: 0;
         font-family: "Poppins", sans-serif;
       }
       .bg {
-        background: #f4f7ff;
-        height: 200vh;
+        background: #e9edc9;
       }
-      .nav {
-        display: flex;
-        justify-content: space-between;
-        background: #fff;
-        padding: 10px 50px;
-      }
-      .menu {
-        display: flex;
-        padding-top: 20px;
-      }
-      .menu a {
-        text-decoration: none;
-      }
-      .home a {
-        color: #3366ff;
-      }
-      .create-event {
-        padding-left: 50px;
-        padding-right: 50px;
-      }
-      .create-event a,
-      .location a {
-        color: #373a42;
-      }
+
+      /* Main Content */
       .wrapper {
         display: flex;
         justify-content: center;
-        margin-top: 50px;
-        margin-left: 80px;
-        margin-right: 80px;
-        margin-bottom: 80px;
+        margin: 50px 120px 100px;
         background: #fff;
         border-radius: 20px;
-        padding: 50px;
+        padding: 71px 100px;
       }
-      .payment-method {
-        width: 400px;
-        height: 450px;
+      .payment-desc {
+        display: flex;
+        flex-direction: column;
+        gap: 40px;
+      }
+      .payment-desc p {
+        font-size: 14px;
+        font-weight: 600;
+        color: #373a42;
+      }
+      label {
+        width: 315px;
+        position: relative;
+      }
+      .accordion {
+        position: absolute;
+        right: 0;
+      }
+      .atm {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        margin: 15px 88px 0 23px;
+        gap: 15px;
+      }
+      .button-atm {
+        width: 45px;
+        height: 45px;
+        color: #61764b;
+        border: 1px dashed #61764b;
+        border-radius: 10px;
       }
       .payment-method .title,
       .ticket-detail .title {
@@ -65,15 +75,18 @@
         font-weight: 600;
         font-size: 20px;
       }
-      .ticket-detail {
-        width: 400px;
-        height: 250px;
-        padding-left: 100px;
+      .card label,
+      .bank label,
+      .retail label,
+      .e-money label {
+        display: flex;
+        align-items: center;
+        gap: 10px;
       }
-      span {
+      .desc span {
         position: absolute;
         right: 230px;
-        color: #3366ff;
+        color: #61764b;
       }
       .desc {
         font-weight: 600;
@@ -88,101 +101,94 @@
         font-size: 15px;
         border: none;
         border-radius: 10px;
-        background-color: #3366ff;
+        background-color: #61764b;
         color: #fff;
-      }
-      .footer {
-        display: flex;
-        justify-content: center;
-        height: 308px;
-      }
-      .col-1 {
-        display: flex;
-        flex-direction: column;
-        justify-content: space-between;
-        padding-right: 50px;
-      }
-      .col-1 .title {
-        margin-bottom: 10px;
-      }
-      .col-2,
-      .col-3 {
-        padding: 0px 50px;
-      }
-      .col-4 {
-        padding-left: 50px;
-      }
-      .head-text {
-        font-weight: 600;
-        margin-bottom: 15px;
-      }
-      .footer-text {
-        color: #c1c5d0;
-      }
-      .sub-text {
-        margin-bottom: 10px;
-      }
-      .bottom-text {
-        font-weight: 600;
-        font-size: 16px;
-        color: #5a7184;
       }
     </style>
   </head>
   <body>
     <div class="bg">
-      <nav class="nav">
-        <div class="logo">
-          <img src="/assets/logo.png" alt="logo" />
+      <!-- Navbar Start -->
+      <nav
+        class="flex justify-between items-center h-24 px-12 bg-white font-semibold"
+      >
+        <div class="flex justify-center items-center text-2xl">
+          <img src="/assets/fill.png" alt="logo" />
+          <span class="text-[#61764B]">We</span
+          ><span class="text-[#FF3D71]">tick</span>
         </div>
-        <div class="menu">
-          <div class="home">
-            <a href="/home.html">Home</a>
-          </div>
-          <div class="create-event">
-            <a href="/create-event.html">Create Event</a>
-          </div>
-          <div class="location">
-            <a href="/location.html">Location</a>
-          </div>
+        <div>
+          <ul class="flex gap-12 text-sm">
+            <a href="#">
+              <li class="pb-2.5 text-[#61764B] border-b border-[#61764B]">
+                Home
+              </li>
+            </a>
+            <li>Create Event</li>
+            <li>Location</li>
+          </ul>
         </div>
-        <div class="profile">
-          <img src="/assets/profile.png" alt="Profile Picture" />
+        <div class="flex items-center gap-3.5">
+          <div
+            class="inline-block rounded-full p-[2px] bg-gradient-to-r from-[#61764B] to-[#A0D995]"
+          >
+            <img
+              class="w-11 h-11 object-cover rounded-full border-2 border-white"
+              src="/assets/profile3.jpg"
+              alt="Profile"
+            />
+          </div>
+          <div>John Tomson</div>
         </div>
       </nav>
+      <!-- Navbar End -->
+      <!-- Main Content Start -->
       <div class="wrapper">
         <div class="payment-method">
           <div class="title">Payment Method</div>
-          <div>
-            <div>
+          <div class="payment-desc">
+            <div class="card">
               <label>
                 <input type="radio" checked />
                 <img src="/assets/card.png" alt="Card" />
-                Card
-                <div class="atm">
-                  <img src="/assets/atm.png" alt="ATM" />
-                </div>
+                <p>Card</p>
+                <button class="accordion">
+                  <img src="/assets/accordion2.png" alt="Accordion" />
+                </button>
               </label>
+              <div class="atm">
+                <img src="/assets/atm.png" alt="ATM" />
+                <button class="button-atm">+</button>
+              </div>
             </div>
-            <div>
+            <div class="bank">
               <label>
                 <input type="radio" />
                 <img src="/assets/bank.png" alt="Bank Transfer" />
-                Bank Transfer
+                <p>Bank Transfer</p>
+                <button class="accordion">
+                  <img src="/assets/accordion.png" alt="Accordion" />
+                </button>
               </label>
             </div>
-            <div>
+            <div class="retail">
               <label>
                 <input type="radio" />
                 <img src="/assets/retail.png" alt="Retail" />
-                Retail
+                <p>Retail</p>
+                <button class="accordion">
+                  <img src="/assets/accordion.png" alt="Accordion" />
+                </button>
               </label>
             </div>
-            <div>
+            <div class="e-money">
               <label>
                 <input type="radio" />
                 <img src="/assets/e-money.png" alt="E-Money" />
-                E-Money
+                <p>E-Money</p>
+                <button class="accordion">
+                  <img src="/assets/accordion.png" alt="Accordion" />
+                </button>
               </label>
             </div>
           </div>
@@ -202,49 +208,72 @@
           </div>
         </div>
       </div>
-      <div class="footer">
-        <div class="col-1">
-          <div class="top-text">
+      <!-- Main Content End -->
+      <!-- Footer Start -->
+      <footer>
+        <div class="flex flex-col items-center gap-20 bg-[#E9EDC9]">
+          <div class="flex justify-center gap-32">
             <div>
-              <img src="/assets/logo.png" alt="logo" />
+              <div class="flex items-center text-2xl mb-8 font-semibold">
+                <img src="/assets/fill.png" alt="logo" />
+                <span class="text-[#61764B]">We</span
+                ><span class="text-[#FF3D71]">tick</span>
+              </div>
+              <div class="text-sm mb-4">Find events you love with our</div>
+              <div class="flex gap-4 text-[#C1C5D0]">
+                <a href="https://www.facebook.com">
+                  <i data-feather="facebook"></i>
+                </a>
+                <a href="https://www.whatsapp.com">
+                  <img src="/assets/whatsapp.png" alt="Whatsapp Icon" />
+                </a>
+                <a href="https://www.instagram.com">
+                  <i data-feather="instagram"></i>
+                </a>
+                <a href="https://www.twitter.com">
+                  <i data-feather="twitter"></i>
+                </a>
+              </div>
             </div>
-            <div class="title">Find events you love with our</div>
             <div>
-              <img src="/assets/icon.png" alt="icon" />
+              <ul class="flex flex-col gap-4">
+                <li class="font-semibold">Wetick</li>
+                <li class="text-sm text-[#C1C5D0]">About Us</li>
+                <li class="text-sm text-[#C1C5D0]">Features</li>
+                <li class="text-sm text-[#C1C5D0]">Blog</li>
+                <li class="text-sm text-[#C1C5D0]">Payments</li>
+                <li class="text-sm text-[#C1C5D0]">Mobile App</li>
+              </ul>
+            </div>
+            <div>
+              <ul class="flex flex-col gap-4">
+                <li class="font-semibold">Features</li>
+                <li class="text-sm text-[#C1C5D0]">Booking</li>
+                <li class="text-sm text-[#C1C5D0]">Create Event</li>
+                <li class="text-sm text-[#C1C5D0]">Discover</li>
+                <li class="text-sm text-[#C1C5D0]">Register</li>
+              </ul>
+            </div>
+            <div>
+              <ul class="flex flex-col gap-4">
+                <li class="font-semibold">Company</li>
+                <li class="text-sm text-[#C1C5D0]">Partnership</li>
+                <li class="text-sm text-[#C1C5D0]">Help</li>
+                <li class="text-sm text-[#C1C5D0]">Term of Service</li>
+                <li class="text-sm text-[#C1C5D0]">Privacy Policy</li>
+                <li class="text-sm text-[#C1C5D0]">Sitemap</li>
+              </ul>
             </div>
           </div>
-          <div class="bottom-text">© 2020 Wetick All Rights Reserved</div>
+          <p class="text-base font-semibold text-[#5A7184] w-[860px]">
+            © 2020 Wetick All Rights Reserved
+          </p>
         </div>
-        <div class="col-2">
-          <div class="head-text">Wetick</div>
-          <div class="footer-text">
-            <div class="sub-text">About Us</div>
-            <div class="sub-text">Features</div>
-            <div class="sub-text">Blog</div>
-            <div class="sub-text">Payments</div>
-            <div class="sub-text">Mobile App</div>
-          </div>
-        </div>
-        <div class="col-3">
-          <div class="head-text">Features</div>
-          <div class="footer-text">
-            <div class="sub-text">Booking</div>
-            <div class="sub-text">Create Event</div>
-            <div class="sub-text">Discover</div>
-            <div class="sub-text">Register</div>
-          </div>
-        </div>
-        <div class="col-4">
-          <div class="head-text">Company</div>
-          <div class="footer-text">
-            <div class="sub-text">Partnership</div>
-            <div class="sub-text">Help</div>
-            <div class="sub-text">Blog</div>
-            <div class="sub-text">Term of Service</div>
-            <div class="sub-text">Sitemap</div>
-          </div>
-        </div>
-      </div>
+      </footer>
+      <!-- Footer End -->
     </div>
+    <script>
+      feather.replace();
+    </script>
   </body>
 </html>
