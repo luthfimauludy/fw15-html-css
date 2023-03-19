@@ -72,7 +72,6 @@
       .reg,
       .vip,
       .vvip {
-        max-width: 370px;
         display: flex;
       }
       .reg,
@@ -132,7 +131,6 @@
       .ticket-desc {
         display: flex;
         justify-content: space-between;
-        max-width: 370px;
         margin-top: 25px;
         margin-bottom: 35px;
       }
@@ -163,7 +161,12 @@
         color: #bdc0c4;
       }
       .btn-payment {
-        min-width: 315px;
+        max-width: 290px;
+      }
+      .btn-payment > a {
+        display: flex;
+        justify-content: center;
+        align-items: center;
         height: 55px;
         font-size: 14px;
         font-weight: 600;
@@ -176,53 +179,39 @@
       /* Responsive 460px */
       @media screen and (max-width: 460px) {
         .bg {
-          height: max-content;
-          background: #fff;
-        }
-        .nav {
-          width: 100%;
-          flex-direction: column;
-        }
-        .menu {
-          flex-direction: column;
-          align-items: center;
-        }
-        .create-event {
-          padding: 0;
-        }
-        .profile {
-          display: flex;
-          justify-content: center;
+          background: white;
         }
         .wrapper {
-          width: 100%;
-          height: 100%;
+          min-width: 320px;
           flex-direction: column;
-          margin: 0;
+          margin: 10px;
           padding: 0;
         }
         .banner {
-          width: 400px;
-          height: 330px;
+          max-height: 228px;
+        }
+        .banner > img {
+          transform: rotate(45deg);
         }
         .ticket-price {
-          margin-left: 20px;
           margin-bottom: 50px;
+          padding: 10px;
+        }
+        .header {
+          margin-bottom: 20px;
+        }
+        .reg,
+        .vip {
+          margin-bottom: 25px;
+        }
+        .ticket-section {
+          min-width: 300px;
+        }
+        .box-ticket {
+          min-width: 240px;
         }
         .btn-payment {
-          width: 370px;
-        }
-        .footer {
-          height: 100%;
-          flex-direction: column;
-          margin-left: 20px;
-        }
-        .col-1,
-        .col-2,
-        .col-3,
-        .col-4 {
-          padding: 0;
-          margin-bottom: 50px;
+          min-width: 280px;
         }
       }
     </style>
@@ -231,22 +220,26 @@
     <div class="bg">
       <!-- Navbar Start -->
       <nav
-        class="flex justify-between items-center h-24 px-12 bg-white font-semibold"
+        class="flex md:flex-row flex-col justify-between items-center md:h-24 px-12 bg-white font-semibold"
       >
         <div class="flex justify-center items-center text-2xl">
-          <img src="/assets/fill.png" alt="logo" />
+          <img src="/assets/logo.png" alt="logo" />
           <span class="text-[#61764B]">We</span
           ><span class="text-[#FF3D71]">tick</span>
         </div>
-        <div>
-          <ul class="flex gap-12 text-sm">
-            <a href="#">
-              <li class="pb-2.5 text-[#61764B] border-b border-[#61764B]">
-                Home
-              </li>
-            </a>
-            <li>Create Event</li>
-            <li>Location</li>
+        <div class="flex md:flex-row flex-col">
+          <ul
+            class="flex md:flex-row flex-col flex-1 items-center md:items-start gap-3 md:gap-12 text-sm"
+          >
+            <li class="pb-2.5 text-[#61764B] border-b border-[#61764B]">
+              <a href="/index.html">Home</a>
+            </li>
+            <li>
+              <a href="/create-event.html">Create Event</a>
+            </li>
+            <li>
+              <a href="">Location</a>
+            </li>
           </ul>
         </div>
         <div class="flex items-center gap-3.5">
@@ -389,21 +382,25 @@
               <p>$70</p>
             </div>
           </div>
-          <div>
-            <a href="/payment.html">
-              <button class="btn-payment">Checkout</button>
-            </a>
+          <div class="btn-payment">
+            <a href="/payment.html">Checkout</a>
           </div>
         </div>
       </div>
       <!-- Main Content End -->
       <!-- Footer Start -->
       <footer>
-        <div class="flex flex-col items-center gap-20 bg-[#E9EDC9]">
-          <div class="flex justify-center gap-32">
+        <div
+          class="flex flex-col md:items-center m-2.5 p-2.5 gap-12 md:gap-20 bg-white md:bg-[#E9EDC9]"
+        >
+          <div
+            class="flex flex-col md:flex-row md:justify-center gap-14 md:gap-32"
+          >
             <div>
-              <div class="flex items-center text-2xl mb-8 font-semibold">
-                <img src="/assets/fill.png" alt="logo" />
+              <div
+                class="flex items-center text-2xl mb-4 md:mb-8 font-semibold"
+              >
+                <img src="/assets/logo.png" alt="logo" />
                 <span class="text-[#61764B]">We</span
                 ><span class="text-[#FF3D71]">tick</span>
               </div>
@@ -453,7 +450,7 @@
               </ul>
             </div>
           </div>
-          <p class="text-base font-semibold text-[#5A7184] w-[860px]">
+          <p class="text-base font-semibold text-[#5A7184] md:min-w-[860px]">
             © 2020 Wetick All Rights Reserved
           </p>
         </div>

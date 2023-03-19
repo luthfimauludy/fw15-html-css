@@ -1,0 +1,882 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Home</title>
+
+    <!-- Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Poppins:wght@400&display=swap"
+      rel="stylesheet"
+    />
+    <script src="https://cdn.tailwindcss.com"></script>
+
+    <!-- Feather Icons -->
+    <script src="https://unpkg.com/feather-icons"></script>
+
+    <!-- Manual Styling -->
+    <style>
+      body {
+        margin: 0;
+        font-family: "Poppins", sans-serif;
+      }
+      .blur {
+        background: linear-gradient(
+          180deg,
+          rgba(51, 102, 255, 0) -50%,
+          #61764b 80%
+        );
+      }
+    </style>
+  </head>
+  <body>
+    <!-- Navbar Start -->
+    <nav
+      id="home"
+      class="flex justify-between items-center h-24 px-12 font-semibold"
+    >
+      <div class="flex justify-center items-center text-2xl">
+        <img src="/assets/logo.png" alt="logo" />
+        <span class="text-[#61764B]">We</span
+        ><span class="text-[#FF3D71]">tick</span>
+      </div>
+      <div>
+        <div class="flex gap-12 text-sm">
+          <a
+            class="text-[#61764B] pb-2.5 border-b border-[#61764B]"
+            href="#home"
+            >Home</a
+          >
+          <a class="pb-2.5" href="/create-event.html">Create Event</a>
+          <a class="pb-2.5" href="#location">Location</a>
+        </div>
+      </div>
+      <div
+        class="flex md:flex-row flex-col gap-3 items-center text-sm font-semibold"
+      >
+        <div class="w-full">
+          <a
+            class="flex justify-center items-center md:min-w-[180px] w-full tracking-widest h-12 rounded-xl"
+            href="/signin.html"
+            >Login</a
+          >
+        </div>
+        <div class="w-full">
+          <a
+            class="flex justify-center items-center md:min-w-[180px] w-full tracking-widest h-12 rounded-xl text-white bg-[#61764B]"
+            href="/signup.html"
+            >Sign Up</a
+          >
+        </div>
+      </div>
+    </nav>
+    <!-- Navbar End -->
+    <!-- Header Start -->
+    <header
+      class="flex md:flex-row flex-col md:px-24 py-10 items-center flex-1 bg-[#61764B] bg-cover bg-no-repeat bg-[url(/assets/accent-heading.png)]"
+    >
+      <div class="flex-1 flex flex-col gap-5">
+        <p
+          class="text-5xl tracking-widest font-semibold max-w-[500px] text-white"
+        >
+          Find events you love with our
+        </p>
+        <form class="block w-full">
+          <div
+            class="inline-flex items-center h-16 py-2 px-3 bg-white border rounded-xl"
+          >
+            <i class="text-[#C1C5D0]" data-feather="search"></i>
+            <input
+              class="h-8 text-xs px-3 outline-none"
+              type="text"
+              placeholder="Search Event"
+            />
+            <i class="text-[#C1C5D0] ml-3" data-feather="map-pin"></i>
+            <select
+              class="h-8 outline-none px-3 appearance-none text-xs md:min-w-[200px]"
+            >
+              <option disabled selected>Where?</option>
+              <option>Bogor</option>
+              <option>Jakarta</option>
+            </select>
+            <button
+              class="w-11 h-11 bg-[#FF3D71] text-white border rounded-[10px]"
+            >
+              &rarr;
+            </button>
+          </div>
+        </form>
+      </div>
+      <div class="relative">
+        <img src="/assets/toyFaces.png" alt="Banner Header" />
+        <div class="w-[510px] h-28 absolute bottom-0 blur"></div>
+      </div>
+    </header>
+    <!-- Header End -->
+    <!-- Main Content Start -->
+    <main>
+      <!-- Event Content Start -->
+      <div class="flex flex-col gap-6 font-semibold place-items-center mt-44">
+        <div
+          class="flex bg-rose-300 h-8 px-4 justify-center items-center gap-2.5 border rounded-full"
+        >
+          <div class="w-8 h-0 border border-solid border-[#ff3d71]"></div>
+          <p class="text-xs text-[#ff3d71] tracking-[3px]">EVENT</p>
+        </div>
+        <p class="text-4xl">Events For You</p>
+        <div class="flex gap-12 mt-10">
+          <div class="pt-4">
+            <button
+              class="w-11 h-11 bg-white text-[#C1C5D0] border rounded-[10px]"
+            >
+              &larr;
+            </button>
+          </div>
+          <div class="flex justify-center items-center gap-20 text-center">
+            <div>
+              <p>13</p>
+              <p>Mon</p>
+            </div>
+            <div>
+              <p>14</p>
+              <p>Tue</p>
+            </div>
+            <div
+              class="border px-[11px] pt-4 pb-[9px] rounded-lg border-[#FF8900] text-[#FF8900]"
+            >
+              <p>15</p>
+              <p>Wed</p>
+            </div>
+            <div>
+              <p>16</p>
+              <p>Thu</p>
+            </div>
+            <div>
+              <p>17</p>
+              <p>Fri</p>
+            </div>
+          </div>
+          <div class="pt-4">
+            <button
+              class="w-11 h-11 bg-[#61764B] text-white border rounded-[10px]"
+            >
+              &rarr;
+            </button>
+          </div>
+        </div>
+        <section>
+          <div class="overflow-x-scroll ml-[120px]">
+            <div class="inline-flex gap-5">
+              <div
+                class="overflow-hidden rounded-3xl w-[260px] h-[376px] relative"
+              >
+                <img
+                  class="w-full h-full object-cover"
+                  src="/assets/event-banner.png"
+                  alt="banner1"
+                />
+                <div
+                  class="absolute bottom-0 text-white flex flex-col gap-1 p-5 bg-gradient-to-b from-[rgba(0,0,0,0.1)] to-[rgba(0,0,0,0.5)]"
+                >
+                  <div>Wed, 15 Nov, 4:00 PM</div>
+                  <div class="font-semibold text-2xl tracking-wide">
+                    Sights & Sounds Exhibition
+                  </div>
+                  <div class="flex ml-2">
+                    <div
+                      class="w-7 h-7 rounded-full overflow-hidden border-2 -ml-2"
+                    >
+                      <img
+                        class="object-cover w-full h-full"
+                        src="/assets/profile1.jpg"
+                        alt="profile 1"
+                      />
+                    </div>
+                    <div
+                      class="w-7 h-7 rounded-full overflow-hidden border-2 -ml-2"
+                    >
+                      <img
+                        class="object-cover w-full h-full"
+                        src="/assets/profile2.jpg"
+                        alt="profile 2"
+                      />
+                    </div>
+                    <div
+                      class="w-7 h-7 rounded-full overflow-hidden border-2 -ml-2"
+                    >
+                      <img
+                        class="object-cover w-full h-full"
+                        src="/assets/profile3.jpg"
+                        alt="profile 3"
+                      />
+                    </div>
+                    <div
+                      class="w-7 h-7 rounded-full overflow-hidden border-2 -ml-2"
+                    >
+                      <img
+                        class="object-cover w-full h-full"
+                        src="/assets/profile4.jpg"
+                        alt="profile 4"
+                      />
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div
+                class="overflow-hidden rounded-3xl w-[260px] h-[376px] relative"
+              >
+                <img
+                  class="w-full h-full object-cover"
+                  src="/assets/event-banner2.png"
+                  alt="banner1"
+                />
+                <div
+                  class="absolute bottom-0 text-white flex flex-col gap-1 p-5 bg-gradient-to-b from-[rgba(0,0,0,0.1)] to-[rgba(0,0,0,0.5)]"
+                >
+                  <div>Thu, 16 Nov, 7:00 PM</div>
+                  <div class="font-bold text-2xl tracking-wide">
+                    See it in Gold Class
+                  </div>
+                  <div class="flex ml-2">
+                    <div
+                      class="w-7 h-7 rounded-full overflow-hidden border-2 -ml-2"
+                    >
+                      <img
+                        class="object-cover w-full h-full"
+                        src="/assets/profile1.jpg"
+                        alt="profile 1"
+                      />
+                    </div>
+                    <div
+                      class="w-7 h-7 rounded-full overflow-hidden border-2 -ml-2"
+                    >
+                      <img
+                        class="object-cover w-full h-full"
+                        src="/assets/profile2.jpg"
+                        alt="profile 2"
+                      />
+                    </div>
+                    <div
+                      class="w-7 h-7 rounded-full overflow-hidden border-2 -ml-2"
+                    >
+                      <img
+                        class="object-cover w-full h-full"
+                        src="/assets/profile3.jpg"
+                        alt="profile 3"
+                      />
+                    </div>
+                    <div
+                      class="w-7 h-7 rounded-full overflow-hidden border-2 -ml-2"
+                    >
+                      <img
+                        class="object-cover w-full h-full"
+                        src="/assets/profile4.jpg"
+                        alt="profile 4"
+                      />
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div
+                class="overflow-hidden rounded-3xl w-[260px] h-[376px] relative"
+              >
+                <img
+                  class="w-full h-full object-cover"
+                  src="/assets/event-banner.png"
+                  alt="banner1"
+                />
+                <div
+                  class="absolute bottom-0 text-white flex flex-col gap-1 p-5 bg-gradient-to-b from-[rgba(0,0,0,0.1)] to-[rgba(0,0,0,0.5)]"
+                >
+                  <div>Wed, 15 Nov, 4:00 PM</div>
+                  <div class="font-bold text-2xl tracking-wide">
+                    Sights & Sounds Exhibition
+                  </div>
+                  <div class="flex ml-2">
+                    <div
+                      class="w-7 h-7 rounded-full overflow-hidden border-2 -ml-2"
+                    >
+                      <img
+                        class="object-cover w-full h-full"
+                        src="/assets/profile1.jpg"
+                        alt="profile 1"
+                      />
+                    </div>
+                    <div
+                      class="w-7 h-7 rounded-full overflow-hidden border-2 -ml-2"
+                    >
+                      <img
+                        class="object-cover w-full h-full"
+                        src="/assets/profile2.jpg"
+                        alt="profile 2"
+                      />
+                    </div>
+                    <div
+                      class="w-7 h-7 rounded-full overflow-hidden border-2 -ml-2"
+                    >
+                      <img
+                        class="object-cover w-full h-full"
+                        src="/assets/profile3.jpg"
+                        alt="profile 3"
+                      />
+                    </div>
+                    <div
+                      class="w-7 h-7 rounded-full overflow-hidden border-2 -ml-2"
+                    >
+                      <img
+                        class="object-cover w-full h-full"
+                        src="/assets/profile4.jpg"
+                        alt="profile 4"
+                      />
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div
+                class="overflow-hidden rounded-3xl w-[260px] h-[376px] relative"
+              >
+                <img
+                  class="w-full h-full object-cover"
+                  src="/assets/event-banner2.png"
+                  alt="banner1"
+                />
+                <div
+                  class="absolute bottom-0 text-white flex flex-col gap-1 p-5 bg-gradient-to-b from-[rgba(0,0,0,0.1)] to-[rgba(0,0,0,0.5)]"
+                >
+                  <div>Thu, 16 Nov, 7:00 PM</div>
+                  <div class="font-bold text-2xl tracking-wide">
+                    See it in Gold Class
+                  </div>
+                  <div class="flex ml-2">
+                    <div
+                      class="w-7 h-7 rounded-full overflow-hidden border-2 -ml-2"
+                    >
+                      <img
+                        class="object-cover w-full h-full"
+                        src="/assets/profile1.jpg"
+                        alt="profile 1"
+                      />
+                    </div>
+                    <div
+                      class="w-7 h-7 rounded-full overflow-hidden border-2 -ml-2"
+                    >
+                      <img
+                        class="object-cover w-full h-full"
+                        src="/assets/profile2.jpg"
+                        alt="profile 2"
+                      />
+                    </div>
+                    <div
+                      class="w-7 h-7 rounded-full overflow-hidden border-2 -ml-2"
+                    >
+                      <img
+                        class="object-cover w-full h-full"
+                        src="/assets/profile3.jpg"
+                        alt="profile 3"
+                      />
+                    </div>
+                    <div
+                      class="w-7 h-7 rounded-full overflow-hidden border-2 -ml-2"
+                    >
+                      <img
+                        class="object-cover w-full h-full"
+                        src="/assets/profile4.jpg"
+                        alt="profile 4"
+                      />
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div
+                class="overflow-hidden rounded-3xl w-[260px] h-[376px] relative"
+              >
+                <img
+                  class="w-full h-full object-cover"
+                  src="/assets/event-banner.png"
+                  alt="banner1"
+                />
+                <div
+                  class="absolute bottom-0 text-white flex flex-col gap-1 p-5 bg-gradient-to-b from-[rgba(0,0,0,0.1)] to-[rgba(0,0,0,0.5)]"
+                >
+                  <div>Wed, 15 Nov, 4:00 PM</div>
+                  <div class="font-bold text-2xl tracking-wide">
+                    Sights & Sounds Exhibition
+                  </div>
+                  <div class="flex ml-2">
+                    <div
+                      class="w-7 h-7 rounded-full overflow-hidden border-2 -ml-2"
+                    >
+                      <img
+                        class="object-cover w-full h-full"
+                        src="/assets/profile1.jpg"
+                        alt="profile 1"
+                      />
+                    </div>
+                    <div
+                      class="w-7 h-7 rounded-full overflow-hidden border-2 -ml-2"
+                    >
+                      <img
+                        class="object-cover w-full h-full"
+                        src="/assets/profile2.jpg"
+                        alt="profile 2"
+                      />
+                    </div>
+                    <div
+                      class="w-7 h-7 rounded-full overflow-hidden border-2 -ml-2"
+                    >
+                      <img
+                        class="object-cover w-full h-full"
+                        src="/assets/profile3.jpg"
+                        alt="profile 3"
+                      />
+                    </div>
+                    <div
+                      class="w-7 h-7 rounded-full overflow-hidden border-2 -ml-2"
+                    >
+                      <img
+                        class="object-cover w-full h-full"
+                        src="/assets/profile4.jpg"
+                        alt="profile 4"
+                      />
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </section>
+        <button
+          class="w-[255px] h-10 border border-[#61764B] rounded-lg text-sm text-[#61764B] mb-44"
+        >
+          See All
+        </button>
+        <!-- Event Content End -->
+        <!-- Location Content Start -->
+        <section id="location" class="mb-44">
+          <div
+            class="px-16 py-20 bg-[#61764B] rounded-[50px] bg-cover bg-no-repeat bg-[url(/assets/accent-location.png)]"
+          >
+            <div
+              class="flex w-40 bg-gray-300 h-8 px-4 mb-6 justify-center items-center gap-2.5 border rounded-full"
+            >
+              <div class="w-8 h-0 border border-solid border-white"></div>
+              <p class="text-xs text-white tracking-[3px]">LOCATION</p>
+            </div>
+            <div class="flex flex-col gap-12">
+              <div class="flex gap-16 text-white">
+                <div class="flex flex-col gap-7 text-4xl w-56">
+                  <p>Discover</p>
+                  <p>Events</p>
+                  <p>Near You</p>
+                </div>
+                <div class="text-center font-medium">
+                  <img
+                    class="mb-3.5"
+                    src="/assets/city1.png"
+                    alt="Jakarta City"
+                  />
+                  <p>Jakarta</p>
+                </div>
+                <div class="text-center font-medium">
+                  <img
+                    class="mb-3.5"
+                    src="/assets/city2.png"
+                    alt="Bandung City"
+                  />
+                  <p>Bandung</p>
+                </div>
+                <div class="text-center font-medium">
+                  <img class="mb-3.5" src="/assets/city3.png" alt="Bali City" />
+                  <p>Bali</p>
+                </div>
+              </div>
+              <div class="flex gap-16 text-white text-center font-medium">
+                <div>
+                  <img class="mb-3.5" src="/assets/city4.png" alt="Aceh City" />
+                  <p>Aceh</p>
+                </div>
+                <div>
+                  <img class="mb-3.5" src="/assets/city5.png" alt="Solo City" />
+                  <p>Solo</p>
+                </div>
+                <div>
+                  <img
+                    class="mb-3.5"
+                    src="/assets/city6.png"
+                    alt="Yogyakarta City"
+                  />
+                  <p>Yogyakarta</p>
+                </div>
+                <div>
+                  <img
+                    class="mb-3.5"
+                    src="/assets/city7.png"
+                    alt="Semarang City"
+                  />
+                  <p>Semarang</p>
+                </div>
+              </div>
+              <div class="flex justify-center items-center">
+                <button
+                  class="w-[255px] h-10 border bg-white border-[#61764B] rounded-lg text-sm text-[#61764B]"
+                >
+                  See All
+                </button>
+              </div>
+            </div>
+          </div>
+        </section>
+        <!-- Location Content End -->
+        <!-- Category Content Start -->
+        <div
+          class="flex bg-rose-300 h-8 px-4 justify-center items-center gap-2.5 border rounded-full"
+        >
+          <div class="w-8 h-0 border border-solid border-[#ff3d71]"></div>
+          <p class="text-xs text-[#ff3d71] tracking-[3px]">CATEGORY</p>
+        </div>
+        <p class="text-4xl mb-10">Browse Event By Category</p>
+        <section class="flex gap-12">
+          <div
+            class="flex justify-center items-center gap-20 text-center font-medium"
+          >
+            <div
+              class="text-[#61764B] pb-2.5 font-semibold border-b border-[#61764B]"
+            >
+              <a href="#">Music</a>
+            </div>
+            <div class="text-[#C1C5D0] pb-2.5">
+              <a href="#">Arts</a>
+            </div>
+            <div class="text-[#C1C5D0] pb-2.5">
+              <a href="#">Outdoors</a>
+            </div>
+            <div class="text-[#C1C5D0] pb-2.5">
+              <a href="#">Workshop</a>
+            </div>
+            <div class="text-[#C1C5D0] pb-2.5">
+              <a href="#">Sport</a>
+            </div>
+            <div class="text-[#C1C5D0] pb-2.5">
+              <a href="#">Festival</a>
+            </div>
+            <div class="text-[#C1C5D0] pb-2.5">
+              <a href="#">Fashion</a>
+            </div>
+          </div>
+        </section>
+        <section class="flex gap-8 mb-44">
+          <div class="flex items-center mr-10">
+            <button
+              class="w-11 h-11 bg-white text-[#C1C5D0] border rounded-[10px]"
+            >
+              &larr;
+            </button>
+          </div>
+          <div
+            class="w-[300px] h-[350px] overflow-hidden rounded-3xl flex flex-col"
+          >
+            <div class="flex-2 overflow-hidden">
+              <img
+                class="w-full h-full object-cover"
+                src="/assets/event-banner.png"
+                alt="banner1"
+              />
+            </div>
+            <div
+              class="flex relative flex-col justify-end flex-1 min-h-[161px] text-white p-8 bg-[#61764B]"
+            >
+              <div class="flex absolute -top-5 ml-2">
+                <div
+                  class="w-7 h-7 rounded-full overflow-hidden border-2 -ml-2"
+                >
+                  <img
+                    class="object-cover w-full h-full"
+                    src="/assets/profile1.jpg"
+                    alt="profile 1"
+                  />
+                </div>
+                <div
+                  class="w-7 h-7 rounded-full overflow-hidden border-2 -ml-2"
+                >
+                  <img
+                    class="object-cover w-full h-full"
+                    src="/assets/profile2.jpg"
+                    alt="profile 2"
+                  />
+                </div>
+                <div
+                  class="w-7 h-7 rounded-full overflow-hidden border-2 -ml-2"
+                >
+                  <img
+                    class="object-cover w-full h-full"
+                    src="/assets/profile3.jpg"
+                    alt="profile 3"
+                  />
+                </div>
+                <div
+                  class="w-7 h-7 rounded-full overflow-hidden border-2 -ml-2"
+                >
+                  <img
+                    class="object-cover w-full h-full"
+                    src="/assets/profile4.jpg"
+                    alt="profile 4"
+                  />
+                </div>
+              </div>
+              <div class="text-sm font-medium">Wed, 15 Nov, 4:00 PM</div>
+              <div class="text-2xl font-bold tracking-wide">
+                Sights & Sounds Exhibition
+              </div>
+            </div>
+          </div>
+          <div
+            class="w-[300px] h-[350px] overflow-hidden rounded-3xl flex flex-col"
+          >
+            <div class="flex-2 overflow-hidden -ml-6">
+              <img
+                class="w-full h-full object-cover"
+                src="/assets/event-banner2.png"
+                alt="banner1"
+              />
+            </div>
+            <div
+              class="flex relative flex-col justify-end flex-1 min-h-[161px] text-white p-8 bg-[#61764B]"
+            >
+              <div class="flex absolute -top-5 ml-2">
+                <div
+                  class="w-7 h-7 rounded-full overflow-hidden border-2 -ml-2"
+                >
+                  <img
+                    class="object-cover w-full h-full"
+                    src="/assets/profile1.jpg"
+                    alt="profile 1"
+                  />
+                </div>
+                <div
+                  class="w-7 h-7 rounded-full overflow-hidden border-2 -ml-2"
+                >
+                  <img
+                    class="object-cover w-full h-full"
+                    src="/assets/profile2.jpg"
+                    alt="profile 2"
+                  />
+                </div>
+                <div
+                  class="w-7 h-7 rounded-full overflow-hidden border-2 -ml-2"
+                >
+                  <img
+                    class="object-cover w-full h-full"
+                    src="/assets/profile3.jpg"
+                    alt="profile 3"
+                  />
+                </div>
+                <div
+                  class="w-7 h-7 rounded-full overflow-hidden border-2 -ml-2"
+                >
+                  <img
+                    class="object-cover w-full h-full"
+                    src="/assets/profile4.jpg"
+                    alt="profile 4"
+                  />
+                </div>
+              </div>
+              <div class="text-sm font-medium">Thu, 16 Nov, 7:00 PM</div>
+              <div class="text-2xl font-bold tracking-wide">
+                See it in Gold Class
+              </div>
+            </div>
+          </div>
+          <div
+            class="w-[300px] h-[350px] overflow-hidden rounded-3xl flex flex-col"
+          >
+            <div class="flex-2 overflow-hidden">
+              <img
+                class="w-full h-full object-cover"
+                src="/assets/event-banner.png"
+                alt="banner1"
+              />
+            </div>
+            <div
+              class="flex relative flex-col justify-end flex-1 min-h-[161px] text-white p-8 bg-[#61764B]"
+            >
+              <div class="flex absolute -top-5 ml-2">
+                <div
+                  class="w-7 h-7 rounded-full overflow-hidden border-2 -ml-2"
+                >
+                  <img
+                    class="object-cover w-full h-full"
+                    src="/assets/profile1.jpg"
+                    alt="profile 1"
+                  />
+                </div>
+                <div
+                  class="w-7 h-7 rounded-full overflow-hidden border-2 -ml-2"
+                >
+                  <img
+                    class="object-cover w-full h-full"
+                    src="/assets/profile2.jpg"
+                    alt="profile 2"
+                  />
+                </div>
+                <div
+                  class="w-7 h-7 rounded-full overflow-hidden border-2 -ml-2"
+                >
+                  <img
+                    class="object-cover w-full h-full"
+                    src="/assets/profile3.jpg"
+                    alt="profile 3"
+                  />
+                </div>
+                <div
+                  class="w-7 h-7 rounded-full overflow-hidden border-2 -ml-2"
+                >
+                  <img
+                    class="object-cover w-full h-full"
+                    src="/assets/profile4.jpg"
+                    alt="profile 4"
+                  />
+                </div>
+              </div>
+              <div class="text-sm font-medium">Wed, 15 Nov, 4:00 PM</div>
+              <div class="text-2xl font-bold tracking-wide">
+                Sights & Sounds Exhibition
+              </div>
+            </div>
+          </div>
+          <div class="flex items-center ml-10">
+            <button
+              class="w-11 h-11 bg-[#61764B] text-white border rounded-[10px]"
+            >
+              &rarr;
+            </button>
+          </div>
+        </section>
+        <!-- Category Content End -->
+        <!-- Partner Content Start -->
+        <section
+          class="w-full bg-[#373A42] mb-44 bg-cover bg-no-repeat bg-[url(/assets/accent-partner.png)]"
+        >
+          <div class="flex flex-col justify-center items-center text-white">
+            <div
+              class="flex w-40 bg-gray-300 h-8 px-7 mt-20 mb-6 justify-center items-center gap-2.5 border rounded-full"
+            >
+              <div class="w-8 h-0 border border-solid border-white"></div>
+              <p class="text-xs tracking-[3px]">PARTNER</p>
+            </div>
+            <p class="text-4xl mb-4">Our Trusted Partners</p>
+            <p class="text-xs text-[#C1C5D0] font-normal mb-12">
+              By companies like :
+            </p>
+            <div class="flex justify-content items-center gap-16 mb-16">
+              <img src="/assets/partner-pic1.png" alt="Picture 1" />
+              <img src="/assets/partner-pic2.png" alt="Picture 1" />
+              <img src="/assets/partner-pic3.png" alt="Picture 1" />
+              <img src="/assets/partner-pic4.png" alt="Picture 1" />
+              <img src="/assets/partner-pic5.png" alt="Picture 1" />
+              <img src="/assets/partner-pic6.png" alt="Picture 1" />
+            </div>
+          </div>
+        </section>
+        <!-- Partner Content End -->
+      </div>
+    </main>
+    <!-- Main Content End -->
+    <!-- Footer Start -->
+    <footer>
+      <div class="flex flex-col items-center gap-20 bg-white">
+        <div class="flex justify-center gap-32">
+          <div>
+            <div class="flex items-center text-2xl mb-8 font-semibold">
+              <img src="/assets/logo.png" alt="logo" />
+              <span class="text-[#61764B]">We</span
+              ><span class="text-[#FF3D71]">tick</span>
+            </div>
+            <div class="text-sm mb-4">Find events you love with our</div>
+            <div class="flex gap-4 text-[#C1C5D0]">
+              <a href="https://www.facebook.com">
+                <i data-feather="facebook"></i>
+              </a>
+              <a href="https://www.whatsapp.com">
+                <img src="/assets/whatsapp.png" alt="Whatsapp Icon" />
+              </a>
+              <a href="https://www.instagram.com">
+                <i data-feather="instagram"></i>
+              </a>
+              <a href="https://www.twitter.com">
+                <i data-feather="twitter"></i>
+              </a>
+            </div>
+          </div>
+          <div>
+            <ul class="flex flex-col gap-4">
+              <li class="font-semibold">Wetick</li>
+              <li class="text-sm text-[#C1C5D0]">
+                <a href="#">About Us</a>
+              </li>
+              <li class="text-sm text-[#C1C5D0]">
+                <a href="#">Features</a>
+              </li>
+              <li class="text-sm text-[#C1C5D0]">
+                <a href="#">Blog</a>
+              </li>
+              <li class="text-sm text-[#C1C5D0]">
+                <a href="#">Payments</a>
+              </li>
+              <li class="text-sm text-[#C1C5D0]">
+                <a href="#">Mobile App</a>
+              </li>
+            </ul>
+          </div>
+          <div>
+            <ul class="flex flex-col gap-4">
+              <li class="font-semibold">Features</li>
+              <li class="text-sm text-[#C1C5D0]">
+                <a href="#">Booking</a>
+              </li>
+              <li class="text-sm text-[#C1C5D0]">
+                <a href="#">Create Event</a>
+              </li>
+              <li class="text-sm text-[#C1C5D0]">
+                <a href="#">Discover</a>
+              </li>
+              <li class="text-sm text-[#C1C5D0]">
+                <a href="#">Register</a>
+              </li>
+            </ul>
+          </div>
+          <div>
+            <ul class="flex flex-col gap-4">
+              <li class="font-semibold">Company</li>
+              <li class="text-sm text-[#C1C5D0]">
+                <a href="#">Partnership</a>
+              </li>
+              <li class="text-sm text-[#C1C5D0]">
+                <a href="#">Help</a>
+              </li>
+              <li class="text-sm text-[#C1C5D0]">
+                <a href="#">Term of Service</a>
+              </li>
+              <li class="text-sm text-[#C1C5D0]">
+                <a href="#">Privacy Policy</a>
+              </li>
+              <li class="text-sm text-[#C1C5D0]">
+                <a href="#">Sitemap</a>
+              </li>
+            </ul>
+          </div>
+        </div>
+        <p class="text-base font-semibold text-[#5A7184] w-[860px]">
+          © 2020 Wetick All Rights Reserved
+        </p>
+      </div>
+    </footer>
+    <!-- Footer End -->
+    <script>
+      feather.replace();
+    </script>
+  </body>
+</html>

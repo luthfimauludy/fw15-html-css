@@ -151,10 +151,16 @@
         margin-bottom: 50px;
       }
       .btn {
-        width: 315px;
+        max-width: 315px;
+      }
+      .btn > a {
+        display: flex;
+        justify-content: center;
+        align-items: center;
         height: 55px;
+        font-size: 16px;
         font-weight: 600;
-        border-radius: 15px;
+        border-radius: 10px;
         background-color: #61764b;
         color: white;
       }
@@ -167,19 +173,21 @@
         class="flex justify-between items-center h-24 px-12 bg-white font-semibold"
       >
         <div class="flex justify-center items-center text-2xl">
-          <img src="/assets/fill.png" alt="logo" />
+          <img src="/assets/logo.png" alt="logo" />
           <span class="text-[#61764B]">We</span
           ><span class="text-[#FF3D71]">tick</span>
         </div>
         <div>
           <ul class="flex gap-12 text-sm">
-            <a href="#">
-              <li class="pb-2.5 text-[#61764B] border-b border-[#61764B]">
-                Home
-              </li>
-            </a>
-            <li>Create Event</li>
-            <li>Location</li>
+            <li class="pb-2.5 text-[#61764B] border-b border-[#61764B]">
+              <a href="/index.html">Home</a>
+            </li>
+            <li>
+              <a href="/create-event.html">Create Event</a>
+            </li>
+            <li>
+              <a href="">Location</a>
+            </li>
           </ul>
         </div>
         <div class="flex items-center gap-3.5">
@@ -255,7 +263,9 @@
             </div>
             <p class="head">Location</p>
             <img class="maps" src="/assets/maps.png" alt="Maps" />
-            <button class="btn">Buy Tickets</button>
+            <div class="btn">
+              <a href="/booking.html">Buy Tickets</a>
+            </div>
           </div>
         </div>
         <!-- Right Content End -->
@@ -267,7 +277,7 @@
           <div class="flex justify-center gap-32">
             <div>
               <div class="flex items-center text-2xl mb-8 font-semibold">
-                <img src="/assets/fill.png" alt="logo" />
+                <img src="/assets/logo.png" alt="logo" />
                 <span class="text-[#61764B]">We</span
                 ><span class="text-[#FF3D71]">tick</span>
               </div>

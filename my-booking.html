@@ -29,15 +29,21 @@
     <!-- Navbar Start -->
     <nav class="flex justify-between items-center h-24 px-12 font-semibold">
       <div class="flex justify-center items-center text-2xl">
-        <img src="/assets/fill.png" alt="logo" />
+        <img src="/assets/logo.png" alt="logo" />
         <span class="text-[#61764B]">We</span
         ><span class="text-[#FF3D71]">tick</span>
       </div>
       <div>
         <ul class="flex gap-12 text-sm">
-          <li>Home</li>
-          <li>Create Event</li>
-          <li>Location</li>
+          <li>
+            <a href="/index.html">Home</a>
+          </li>
+          <li>
+            <a href="/create-event.html">Create Event</a>
+          </li>
+          <li>
+            <a href="">Location</a>
+          </li>
         </ul>
       </div>
       <div class="flex items-center gap-3.5">
@@ -81,29 +87,49 @@
           </li>
           <li>
             <ul class="ml-12">
-              <li class="flex gap-7 mb-8">
+              <li class="flex gap-7 mb-8 relative">
                 <i class="text-[#C1C5D0]" data-feather="credit-card"></i>Card
+                <div class="absolute w-28 border border-black top-2"></div>
               </li>
-              <li class="flex gap-7 mb-8">
-                <i class="text-[#C1C5D0]" data-feather="edit-3"></i>Edit Profile
+              <li>
+                <a class="flex gap-7 mb-8" href="/profile.html">
+                  <i class="text-[#C1C5D0]" data-feather="edit-3"></i>Edit
+                  Profile
+                </a>
               </li>
-              <li class="flex gap-7 mb-8">
-                <i class="text-[#C1C5D0]" data-feather="lock"></i>Change
-                Password
+              <li>
+                <a class="flex gap-7 mb-8" href="/change-password.html">
+                  <i class="text-[#C1C5D0]" data-feather="lock"></i>Change
+                  Password
+                </a>
               </li>
             </ul>
           </li>
-          <li class="flex gap-7 mb-8 text-[#61764B]">
-            <i data-feather="list"></i>My Booking
+          <li>
+            <a class="flex gap-7 mb-8" href="/create-event.html">
+              <i class="text-[#C1C5D0]" data-feather="plus-circle"></i>Create
+              Event
+            </a>
           </li>
-          <li class="flex gap-7 mb-8">
-            <i class="text-[#C1C5D0]" data-feather="heart"></i>My Wishlist
+          <li>
+            <a class="flex gap-7 mb-8 text-[#61764B]" href="/my-booking.html">
+              <i data-feather="list"></i>My Booking
+            </a>
           </li>
-          <li class="flex gap-7 mb-8">
-            <i class="text-[#C1C5D0]" data-feather="settings"></i>Settings
+          <li>
+            <a class="flex gap-7 mb-8" href="/my-wishlist.html">
+              <i class="text-[#C1C5D0]" data-feather="heart"></i>My Wishlist
+            </a>
           </li>
-          <li class="flex gap-7 mb-8 text-[#F03800]">
-            <i data-feather="log-out"></i>Logout
+          <li>
+            <a class="flex gap-7 mb-8" href="">
+              <i class="text-[#C1C5D0]" data-feather="settings"></i>Settings
+            </a>
+          </li>
+          <li>
+            <a class="flex gap-7 mb-8 text-[#F03800]" href="/signin.html">
+              <i data-feather="log-out"></i>Logout
+            </a>
           </li>
         </ul>
       </aside>
@@ -235,7 +261,7 @@
         <div class="flex justify-center gap-32">
           <div>
             <div class="flex items-center text-2xl mb-8 font-semibold">
-              <img src="/assets/fill.png" alt="logo" />
+              <img src="/assets/logo.png" alt="logo" />
               <span class="text-[#61764B]">We</span
               ><span class="text-[#FF3D71]">tick</span>
             </div>

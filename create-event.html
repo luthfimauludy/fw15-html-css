@@ -4,7 +4,7 @@
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>My Wishlist</title>
+    <title>Create Event</title>
 
     <!-- Fonts -->
     <link rel="preconnect" href="https://fonts.googleapis.com" />
@@ -25,7 +25,85 @@
       }
     </style>
   </head>
-  <body>
+  <body class="relative">
+    <div
+      class="absolute w-full min-h-screen h-full bg-[rgba(0,0,0,0.5)] flex justify-center items-center"
+    >
+      <div class="bg-white min-w-[80%] min-h-[200px] rounded-xl p-10">
+        <div class="mb-11 text-xl tracking-wider font-semibold">
+          Create Event
+        </div>
+        <div class="flex justify-between gap-16">
+          <div class="w-[481px]">
+            <div class="mb-2">Name</div>
+            <div>
+              <input
+                type="text"
+                class="w-full h-14 px-5 py-4 mb-8 border rounded-xl border-[#C1C5D0]"
+                placeholder="Input Name Event ..."
+              />
+            </div>
+            <div class="mb-2">Location</div>
+            <div>
+              <input
+                type="text"
+                class="w-full h-14 px-5 py-4 mb-8 border rounded-xl border-[#C1C5D0]"
+                placeholder="Select Location"
+              />
+            </div>
+            <div class="mb-2">Price</div>
+            <div>
+              <input
+                type="text"
+                class="w-full h-14 px-5 py-4 mb-8 border rounded-xl border-[#C1C5D0]"
+                placeholder="Input Price"
+              />
+            </div>
+          </div>
+          <div class="w-[481px]">
+            <div class="mb-2">Category</div>
+            <div>
+              <input
+                type="text"
+                class="w-full h-14 px-5 py-4 mb-8 border rounded-xl border-[#C1C5D0]"
+                placeholder="Select Category"
+              />
+            </div>
+            <div class="mb-2">Date Time Show</div>
+            <div>
+              <input
+                type="text"
+                class="w-full h-14 px-5 py-4 mb-8 border rounded-xl border-[#C1C5D0]"
+                placeholder="01/01/2022"
+              />
+            </div>
+            <div class="mb-2">Image</div>
+            <div>
+              <input
+                type="text"
+                class="w-full h-14 px-5 py-4 mb-8 border rounded-xl border-[#C1C5D0]"
+                placeholder="Choose File ..."
+              />
+            </div>
+          </div>
+        </div>
+        <div class="mb-2">Detail</div>
+        <div>
+          <input
+            type="text"
+            class="w-full h-14 px-5 pt-5 pb-12 mb-8 border rounded-xl border-[#C1C5D0]"
+            placeholder="Input Detail ..."
+          />
+        </div>
+        <div class="flex justify-end">
+          <a
+            class="flex justify-center items-center min-w-[315px] h-12 rounded-xl text-white bg-[#61764B]"
+            href="/manage-event.html"
+            >Save</a
+          >
+        </div>
+      </div>
+    </div>
     <!-- Navbar Start -->
     <nav class="flex justify-between items-center h-24 px-12 font-semibold">
       <div class="flex justify-center items-center text-2xl">
@@ -35,15 +113,9 @@
       </div>
       <div>
         <ul class="flex gap-12 text-sm">
-          <li>
-            <a href="/index.html">Home</a>
-          </li>
-          <li>
-            <a href="/create-event.html">Create Event</a>
-          </li>
-          <li>
-            <a href="">Location</a>
-          </li>
+          <li>Home</li>
+          <li>Create Event</li>
+          <li>Location</li>
         </ul>
       </div>
       <div class="flex items-center gap-3.5">
@@ -91,45 +163,29 @@
                 <i class="text-[#C1C5D0]" data-feather="credit-card"></i>Card
                 <div class="absolute w-28 border border-black top-2"></div>
               </li>
-              <li>
-                <a class="flex gap-7 mb-8" href="/profile.html">
-                  <i class="text-[#C1C5D0]" data-feather="edit-3"></i>Edit
-                  Profile
-                </a>
+              <li class="flex gap-7 mb-8">
+                <i class="text-[#C1C5D0]" data-feather="edit-3"></i>Edit Profile
               </li>
-              <li>
-                <a class="flex gap-7 mb-8" href="/change-password.html">
-                  <i class="text-[#C1C5D0]" data-feather="lock"></i>Change
-                  Password
-                </a>
+              <li class="flex gap-7 mb-8">
+                <i class="text-[#C1C5D0]" data-feather="lock"></i>Change
+                Password
               </li>
             </ul>
           </li>
-          <li>
-            <a class="flex gap-7 mb-8" href="/create-event.html">
-              <i class="text-[#C1C5D0]" data-feather="plus-circle"></i>Create
-              Event
-            </a>
+          <li class="flex gap-7 mb-8 text-[#61764B]">
+            <i data-feather="plus-circle"></i>Create Event
           </li>
-          <li>
-            <a class="flex gap-7 mb-8" href="/my-booking.html">
-              <i class="text-[#C1C5D0]" data-feather="list"></i>My Booking
-            </a>
+          <li class="flex gap-7 mb-8">
+            <i class="text-[#C1C5D0]" data-feather="list"></i>My Booking
           </li>
-          <li>
-            <a class="flex gap-7 mb-8 text-[#61764B]" href="">
-              <i data-feather="heart"></i>My Wishlist
-            </a>
+          <li class="flex gap-7 mb-8">
+            <i class="text-[#C1C5D0]" data-feather="heart"></i>My Wishlist
           </li>
-          <li>
-            <a class="flex gap-7 mb-8" href="">
-              <i class="text-[#C1C5D0]" data-feather="settings"></i>Settings
-            </a>
+          <li class="flex gap-7 mb-8">
+            <i class="text-[#C1C5D0]" data-feather="settings"></i>Settings
           </li>
-          <li>
-            <a class="flex gap-7 mb-8 text-[#F03800]" href="/signin.html">
-              <i data-feather="log-out"></i>Logout
-            </a>
+          <li class="flex gap-7 mb-8 text-[#F03800]">
+            <i data-feather="log-out"></i>Logout
           </li>
         </ul>
       </aside>
@@ -137,8 +193,13 @@
       <!-- Right Content Start -->
       <div class="flex-1">
         <div class="bg-white h-[825px] px-12 py-11 rounded-2xl mr-16">
-          <div class="text-xl font-semibold tracking-wide mb-12">
-            My Wishlist
+          <div class="flex justify-between">
+            <div class="text-xl font-semibold tracking-wide mb-12">
+              Manage Event
+            </div>
+            <button class="w-[125px] h-[50px] text-xs rounded-2xl bg-[#E9EDC9]">
+              Create
+            </button>
           </div>
           <div class="flex flex-col gap-6">
             <div>
@@ -153,10 +214,14 @@
                       Sights & Sounds Exhibition
                     </p>
                     <p class="text-xs mb-2">Jakarta, Indonesia</p>
-                    <p class="text-xs">Wed, 15 Nov, 4:00 PM</p>
+                    <p class="text-xs mb-2">Wed, 15 Nov, 4:00 PM</p>
+                    <div class="flex gap-3.5 text-xs text-[#61764B]">
+                      <a href="#">Detail</a>
+                      <a href="#">Update</a>
+                      <a href="#">Delete</a>
+                    </div>
                   </div>
                 </div>
-                <i class="text-[#61764B]" data-feather="heart"></i>
               </div>
             </div>
             <div>
@@ -171,10 +236,14 @@
                       Sights & Sounds Exhibition
                     </p>
                     <p class="text-xs mb-2">Jakarta, Indonesia</p>
-                    <p class="text-xs">Wed, 15 Nov, 4:00 PM</p>
+                    <p class="text-xs mb-2">Wed, 15 Nov, 4:00 PM</p>
+                    <div class="flex gap-3.5 text-xs text-[#61764B]">
+                      <a href="#">Detail</a>
+                      <a href="#">Update</a>
+                      <a href="#">Delete</a>
+                    </div>
                   </div>
                 </div>
-                <i class="text-[#61764B]" data-feather="heart"></i>
               </div>
             </div>
             <div>
@@ -189,10 +258,14 @@
                       Sights & Sounds Exhibition
                     </p>
                     <p class="text-xs mb-2">Jakarta, Indonesia</p>
-                    <p class="text-xs">Wed, 15 Nov, 4:00 PM</p>
+                    <p class="text-xs mb-2">Wed, 15 Nov, 4:00 PM</p>
+                    <div class="flex gap-3.5 text-xs text-[#61764B]">
+                      <a href="#">Detail</a>
+                      <a href="#">Update</a>
+                      <a href="#">Delete</a>
+                    </div>
                   </div>
                 </div>
-                <i class="text-[#61764B]" data-feather="heart"></i>
               </div>
             </div>
             <div>
@@ -207,10 +280,14 @@
                       Sights & Sounds Exhibition
                     </p>
                     <p class="text-xs mb-2">Jakarta, Indonesia</p>
-                    <p class="text-xs">Wed, 15 Nov, 4:00 PM</p>
+                    <p class="text-xs mb-2">Wed, 15 Nov, 4:00 PM</p>
+                    <div class="flex gap-3.5 text-xs text-[#61764B]">
+                      <a href="#">Detail</a>
+                      <a href="#">Update</a>
+                      <a href="#">Delete</a>
+                    </div>
                   </div>
                 </div>
-                <i class="text-[#61764B]" data-feather="heart"></i>
               </div>
             </div>
             <div>
@@ -225,10 +302,14 @@
                       Sights & Sounds Exhibition
                     </p>
                     <p class="text-xs mb-2">Jakarta, Indonesia</p>
-                    <p class="text-xs">Wed, 15 Nov, 4:00 PM</p>
+                    <p class="text-xs mb-2">Wed, 15 Nov, 4:00 PM</p>
+                    <div class="flex gap-3.5 text-xs text-[#61764B]">
+                      <a href="#">Detail</a>
+                      <a href="#">Update</a>
+                      <a href="#">Delete</a>
+                    </div>
                   </div>
                 </div>
-                <i class="text-[#61764B]" data-feather="heart"></i>
               </div>
             </div>
           </div>
