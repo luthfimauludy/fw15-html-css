@@ -149,7 +149,7 @@
           <div class="flex flex-col-reverse md:flex-row px-5 md:px-0">
             <form class="flex flex-col text-sm text-[#373A42]">
               <div class="flex flex-col md:flex-row md:items-center mb-8">
-                <label class="w-full mb-2.5 md:mb-0" for="name">Name</label>
+                <label class="w-48 mb-2.5 md:mb-0" for="name">Name</label>
                 <input
                   class="md:flex-1 h-14 px-7 border border-[#c1c5d0] outline-none rounded-2xl"
                   type="text"
@@ -216,12 +216,13 @@
                 <div
                   class="relative flex-1 px-7 border border-[#c1c5d0] rounded-2xl"
                 >
-                  <input
-                    class="h-14 outline-none"
-                    type="text"
-                    name="profession"
-                    placeholder="Entrepreneur"
-                  />
+                  <select
+                    class="h-14 outline-none appearance-none md:min-w-[234px]"
+                  >
+                    <option disabled selected>Entrepreneur</option>
+                    <option>Programmer</option>
+                    <option>Manager</option>
+                  </select>
                   <div class="absolute flex top-4 right-5">
                     <img src="/assets/accordion.png" alt="Accordion" />
                   </div>
@@ -232,12 +233,19 @@
                 <div
                   class="relative flex-1 px-7 border border-[#c1c5d0] rounded-2xl"
                 >
-                  <input
+                  <select
+                    class="h-14 outline-none appearance-none md:min-w-[234px]"
+                  >
+                    <option disabled selected>Indonesia</option>
+                    <option>Saudi Arabia</option>
+                    <option>Australia</option>
+                  </select>
+                  <!-- <input
                     class="h-14 outline-none"
                     type="text"
                     name="nasionality"
                     placeholder="Indonesia"
-                  />
+                  /> -->
                   <div class="absolute flex top-4 right-5">
                     <img src="/assets/accordion.png" alt="Accordion" />
                   </div>
