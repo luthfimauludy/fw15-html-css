@@ -178,6 +178,6 @@ input[type="checkbox"]:checked ~ .checkmarking::after {
   }
   .form-section {
     justify-content: start;
-    padding: 0 10px 20px;
+    padding: 0 10px;
   }
 }
