@@ -170,10 +170,14 @@ input[type="checkbox"]:checked ~ .checkmarking::after {
 
 /* Responsive 460px */
 @media screen and (max-width: 460px) {
+  .wrapper {
+    margin-bottom: 20px;
+  }
   .img-section {
     display: none;
   }
   .form-section {
-    padding: 0 30px;
+    justify-content: start;
+    padding: 0 10px 20px;
   }
 }
