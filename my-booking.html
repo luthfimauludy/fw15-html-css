@@ -27,43 +27,67 @@
   </head>
   <body>
     <!-- Navbar Start -->
-    <nav class="flex justify-between items-center h-24 px-12 font-semibold">
+    <nav class="flex md:flex-row flex-col md:h-24 px-8 bg-white font-semibold">
       <div class="flex justify-center items-center text-2xl">
         <img src="/assets/logo.png" alt="logo" />
-        <span class="text-[#61764B]">We</span
-        ><span class="text-[#FF3D71]">tick</span>
+        <div class="text-2xl">
+          <a href="/index.html">
+            <span class="text-[#61764B]">We</span
+            ><span class="text-[#FF3D71]">tick</span>
+          </a>
+        </div>
       </div>
-      <div>
-        <ul class="flex gap-12 text-sm">
-          <li>
-            <a href="/index.html">Home</a>
+      <div
+        class="flex md:flex-row flex-col flex-1 md:pl-8 mb-5 md:mb-0 text-sm"
+      >
+        <ul class="flex justify-center md:flex-row flex-col flex-1 gap-3">
+          <li class="flex justify-center items-center min-w-[100px]">
+            <a
+              class="hover:text-[#61764B] pb-2.5 border-b border-transparent hover:border-[#61764B]"
+              href="#home"
+              >Home</a
+            >
           </li>
-          <li>
-            <a href="/create-event.html">Create Event</a>
+          <li class="flex justify-center items-center min-w-[100px]">
+            <a
+              class="hover:text-[#61764B] pb-2.5 border-b border-transparent hover:border-[#61764B]"
+              href="/create-event.html"
+              >Create Event</a
+            >
           </li>
-          <li>
-            <a href="">Location</a>
+          <li class="flex justify-center items-center min-w-[100px]">
+            <a
+              class="hover:text-[#61764B] pb-2.5 border-b border-transparent hover:border-[#61764B]"
+              href="/event.html"
+              >Location</a
+            >
           </li>
         </ul>
-      </div>
-      <div class="flex items-center gap-3.5">
         <div
-          class="inline-block rounded-full p-[2px] bg-gradient-to-r from-[#61764B] to-[#A0D995]"
+          class="flex justify-center gap-3 items-center text-sm font-semibold"
         >
-          <img
-            class="w-11 h-11 object-cover rounded-full border-2 border-white"
-            src="/assets/profile3.jpg"
-            alt="Profile"
-          />
+          <div
+            class="inline-block rounded-full p-[2px] bg-gradient-to-r from-[#61764B] to-[#A0D995]"
+          >
+            <img
+              class="w-11 h-11 object-cover rounded-full border-2 border-white"
+              src="/assets/profile3.jpg"
+              alt="Profile"
+            />
+          </div>
+          <div>
+            <a href="/profile.html">John Tomson</a>
+          </div>
         </div>
-        <div>John Tomson</div>
       </div>
     </nav>
     <!-- Navbar End -->
     <!-- Main Content Start -->
-    <main class="flex pb-[100px] pt-12 bg-[#E9EDC9]">
+    <main
+      class="flex mt-5 md:mt-0 md:pt-12 pb-24 px-5 md:px-16 bg-white md:bg-[#E9EDC9]"
+    >
       <!-- Left Content Start -->
-      <aside class="w-60 mx-16">
+      <aside class="hidden md:block mr-16">
         <div class="flex gap-3.5 mb-14">
           <div class="flex gap-3.5">
             <div
@@ -82,8 +106,10 @@
           </div>
         </div>
         <ul class="text-sm font-semibold">
-          <li class="flex gap-7 mb-8">
-            <i class="text-[#C1C5D0]" data-feather="user"></i>Profile
+          <li>
+            <a class="flex gap-7 mb-8" href="">
+              <i class="text-[#C1C5D0]" data-feather="user"></i>Profile
+            </a>
           </li>
           <li>
             <ul class="ml-12">
@@ -106,7 +132,7 @@
             </ul>
           </li>
           <li>
-            <a class="flex gap-7 mb-8" href="/create-event.html">
+            <a class="flex gap-7 mb-8" href="/manage-event.html">
               <i class="text-[#C1C5D0]" data-feather="plus-circle"></i>Create
               Event
             </a>
@@ -127,7 +153,7 @@
             </a>
           </li>
           <li>
-            <a class="flex gap-7 mb-8 text-[#F03800]" href="/signin.html">
+            <a class="flex gap-7 mb-8 text-[#F03800]" href="/index.html">
               <i data-feather="log-out"></i>Logout
             </a>
           </li>
@@ -135,117 +161,105 @@
       </aside>
       <!-- Left Content End -->
       <!-- Right Content Start -->
-      <div class="flex-1">
-        <div class="bg-white h-[825px] px-12 py-11 rounded-2xl mr-16">
-          <div class="flex justify-between mb-12">
-            <div class="text-xl font-semibold tracking-wide">
-              <p>My Booking</p>
-            </div>
-            <div
-              class="flex w-32 h-12 justify-center items-center rounded-2xl text-[#61764B] gap-4 bg-[#EAF1FF]"
-            >
-              <i data-feather="calendar"></i>
-              <p>March</p>
+      <div class="flex-1 bg-white md:px-12 md:py-11 rounded-2xl md:mr-16">
+        <div
+          class="flex md:flex-row flex-col gap-3 justify-between mb-10 md:mb-5"
+        >
+          <div class="text-xl font-semibold tracking-wide">
+            <p>My Booking</p>
+          </div>
+          <div
+            class="flex w-32 h-12 justify-center items-center rounded-2xl text-[#61764B] gap-4 bg-[#E9EDC9]"
+          >
+            <i data-feather="calendar"></i>
+            <p>March</p>
+          </div>
+        </div>
+        <div class="flex flex-col gap-6">
+          <div>
+            <div class="flex">
+              <div class="flex flex-col items-center mr-8">
+                <p class="text-sm text-[#FF8900] pt-3">15</p>
+                <p class="text-xs">Wed</p>
+              </div>
+              <div class="grow">
+                <div>
+                  <p
+                    class="md:text-2xl text-lg font-semibold mb-4 tracking-widest"
+                  >
+                    Sights & Sounds Exhibition
+                  </p>
+                  <p class="text-xs">Jakarta, Indonesia</p>
+                  <p class="text-xs my-2">Wed, 15 Nov, 4:00 PM</p>
+                  <a class="text-xs text-[#61764B]" href="/event.html"
+                    >Detail</a
+                  >
+                </div>
+              </div>
             </div>
           </div>
-          <div class="flex flex-col gap-6">
-            <div>
-              <div class="flex">
-                <div class="flex flex-col items-center mr-8">
-                  <p class="text-sm text-[#FF8900] pt-3">15</p>
-                  <p class="text-xs">Wed</p>
-                </div>
-                <div class="grow">
-                  <div>
-                    <p class="text-2xl font-semibold mb-4">
-                      Sights & Sounds Exhibition
-                    </p>
-                    <p class="text-xs">Jakarta, Indonesia</p>
-                    <p class="text-xs my-2">Wed, 15 Nov, 4:00 PM</p>
-                    <a class="text-xs text-[#61764B]" href="/detail.html"
-                      >Detail</a
-                    >
-                  </div>
+          <div>
+            <div class="flex">
+              <div class="flex flex-col items-center mr-8">
+                <p class="text-sm text-[#FF8900] pt-3">15</p>
+                <p class="text-xs">Wed</p>
+              </div>
+              <div class="grow border-t">
+                <div>
+                  <p
+                    class="md:text-2xl text-lg font-semibold mb-4 tracking-widest"
+                  >
+                    Sights & Sounds Exhibition
+                  </p>
+                  <p class="text-xs mb-2">Jakarta, Indonesia</p>
+                  <p class="text-xs">Wed, 15 Nov, 4:00 PM</p>
+                  <a class="text-xs text-[#61764B]" href="/event.html"
+                    >Detail</a
+                  >
                 </div>
               </div>
             </div>
-            <div>
-              <div class="flex">
-                <div class="flex flex-col items-center mr-8">
-                  <p class="text-sm text-[#FF8900] pt-3">15</p>
-                  <p class="text-xs">Wed</p>
-                </div>
-                <div class="grow border-t">
-                  <div>
-                    <p class="text-2xl font-semibold mb-4">
-                      Sights & Sounds Exhibition
-                    </p>
-                    <p class="text-xs mb-2">Jakarta, Indonesia</p>
-                    <p class="text-xs">Wed, 15 Nov, 4:00 PM</p>
-                    <a class="text-xs text-[#61764B]" href="/detail.html"
-                      >Detail</a
-                    >
-                  </div>
+          </div>
+          <div>
+            <div class="flex">
+              <div class="flex flex-col items-center mr-8">
+                <p class="text-sm text-[#FF8900] pt-3">15</p>
+                <p class="text-xs">Wed</p>
+              </div>
+              <div class="grow border-t">
+                <div>
+                  <p
+                    class="md:text-2xl text-lg font-semibold mb-4 tracking-widest"
+                  >
+                    Sights & Sounds Exhibition
+                  </p>
+                  <p class="text-xs mb-2">Jakarta, Indonesia</p>
+                  <p class="text-xs">Wed, 15 Nov, 4:00 PM</p>
+                  <a class="text-xs text-[#61764B]" href="/event.html"
+                    >Detail</a
+                  >
                 </div>
               </div>
             </div>
-            <div>
-              <div class="flex">
-                <div class="flex flex-col items-center mr-8">
-                  <p class="text-sm text-[#FF8900] pt-3">15</p>
-                  <p class="text-xs">Wed</p>
-                </div>
-                <div class="grow border-t">
-                  <div>
-                    <p class="text-2xl font-semibold mb-4">
-                      Sights & Sounds Exhibition
-                    </p>
-                    <p class="text-xs mb-2">Jakarta, Indonesia</p>
-                    <p class="text-xs">Wed, 15 Nov, 4:00 PM</p>
-                    <a class="text-xs text-[#61764B]" href="/detail.html"
-                      >Detail</a
-                    >
-                  </div>
-                </div>
+          </div>
+          <div>
+            <div class="flex">
+              <div class="flex flex-col items-center mr-8">
+                <p class="text-sm text-[#FF8900] pt-3">15</p>
+                <p class="text-xs">Wed</p>
               </div>
-            </div>
-            <div>
-              <div class="flex">
-                <div class="flex flex-col items-center mr-8">
-                  <p class="text-sm text-[#FF8900] pt-3">15</p>
-                  <p class="text-xs">Wed</p>
-                </div>
-                <div class="grow border-t">
-                  <div>
-                    <p class="text-2xl font-semibold mb-4">
-                      Sights & Sounds Exhibition
-                    </p>
-                    <p class="text-xs mb-2">Jakarta, Indonesia</p>
-                    <p class="text-xs">Wed, 15 Nov, 4:00 PM</p>
-                    <a class="text-xs text-[#61764B]" href="/detail.html"
-                      >Detail</a
-                    >
-                  </div>
-                </div>
-              </div>
-            </div>
-            <div>
-              <div class="flex">
-                <div class="flex flex-col items-center mr-8">
-                  <p class="text-sm text-[#FF8900] pt-3">15</p>
-                  <p class="text-xs">Wed</p>
-                </div>
-                <div class="grow border-t">
-                  <div>
-                    <p class="text-2xl font-semibold mb-4">
-                      Sights & Sounds Exhibition
-                    </p>
-                    <p class="text-xs mb-2">Jakarta, Indonesia</p>
-                    <p class="text-xs">Wed, 15 Nov, 4:00 PM</p>
-                    <a class="text-xs text-[#61764B]" href="/detail.html"
-                      >Detail</a
-                    >
-                  </div>
+              <div class="grow border-t">
+                <div>
+                  <p
+                    class="md:text-2xl text-lg font-semibold mb-4 tracking-widest"
+                  >
+                    Sights & Sounds Exhibition
+                  </p>
+                  <p class="text-xs mb-2">Jakarta, Indonesia</p>
+                  <p class="text-xs">Wed, 15 Nov, 4:00 PM</p>
+                  <a class="text-xs text-[#61764B]" href="/event.html"
+                    >Detail</a
+                  >
                 </div>
               </div>
             </div>
@@ -257,13 +271,19 @@
     <!-- Main Content End -->
     <!-- Footer Start -->
     <footer>
-      <div class="flex flex-col items-center gap-20 bg-[#E9EDC9]">
-        <div class="flex justify-center gap-32">
+      <div
+        class="flex flex-col md:items-center p-2.5 md:p-0 gap-12 md:gap-20 md:bg-[#E9EDC9]"
+      >
+        <div
+          class="flex md:flex-row flex-col md:justify-center gap-14 md:gap-32"
+        >
           <div>
-            <div class="flex items-center text-2xl mb-8 font-semibold">
+            <div class="flex items-center text-2xl mb-4 md:mb-8 font-semibold">
               <img src="/assets/logo.png" alt="logo" />
-              <span class="text-[#61764B]">We</span
-              ><span class="text-[#FF3D71]">tick</span>
+              <a href="/index.html">
+                <span class="text-[#61764B]">We</span
+                ><span class="text-[#FF3D71]">tick</span>
+              </a>
             </div>
             <div class="text-sm mb-4">Find events you love with our</div>
             <div class="flex gap-4 text-[#C1C5D0]">
@@ -284,34 +304,62 @@
           <div>
             <ul class="flex flex-col gap-4">
               <li class="font-semibold">Wetick</li>
-              <li class="text-sm text-[#C1C5D0]">About Us</li>
-              <li class="text-sm text-[#C1C5D0]">Features</li>
-              <li class="text-sm text-[#C1C5D0]">Blog</li>
-              <li class="text-sm text-[#C1C5D0]">Payments</li>
-              <li class="text-sm text-[#C1C5D0]">Mobile App</li>
+              <li class="text-sm text-[#C1C5D0]">
+                <a href="#">About Us</a>
+              </li>
+              <li class="text-sm text-[#C1C5D0]">
+                <a href="#">Features</a>
+              </li>
+              <li class="text-sm text-[#C1C5D0]">
+                <a href="#">Blog</a>
+              </li>
+              <li class="text-sm text-[#C1C5D0]">
+                <a href="#">Payments</a>
+              </li>
+              <li class="text-sm text-[#C1C5D0]">
+                <a href="#">Mobile App</a>
+              </li>
             </ul>
           </div>
           <div>
             <ul class="flex flex-col gap-4">
               <li class="font-semibold">Features</li>
-              <li class="text-sm text-[#C1C5D0]">Booking</li>
-              <li class="text-sm text-[#C1C5D0]">Create Event</li>
-              <li class="text-sm text-[#C1C5D0]">Discover</li>
-              <li class="text-sm text-[#C1C5D0]">Register</li>
+              <li class="text-sm text-[#C1C5D0]">
+                <a href="#">Booking</a>
+              </li>
+              <li class="text-sm text-[#C1C5D0]">
+                <a href="#">Create Event</a>
+              </li>
+              <li class="text-sm text-[#C1C5D0]">
+                <a href="#">Discover</a>
+              </li>
+              <li class="text-sm text-[#C1C5D0]">
+                <a href="#">Register</a>
+              </li>
             </ul>
           </div>
           <div>
             <ul class="flex flex-col gap-4">
               <li class="font-semibold">Company</li>
-              <li class="text-sm text-[#C1C5D0]">Partnership</li>
-              <li class="text-sm text-[#C1C5D0]">Help</li>
-              <li class="text-sm text-[#C1C5D0]">Term of Service</li>
-              <li class="text-sm text-[#C1C5D0]">Privacy Policy</li>
-              <li class="text-sm text-[#C1C5D0]">Sitemap</li>
+              <li class="text-sm text-[#C1C5D0]">
+                <a href="#">Partnership</a>
+              </li>
+              <li class="text-sm text-[#C1C5D0]">
+                <a href="#">Help</a>
+              </li>
+              <li class="text-sm text-[#C1C5D0]">
+                <a href="#">Term of Service</a>
+              </li>
+              <li class="text-sm text-[#C1C5D0]">
+                <a href="#">Privacy Policy</a>
+              </li>
+              <li class="text-sm text-[#C1C5D0]">
+                <a href="#">Sitemap</a>
+              </li>
             </ul>
           </div>
         </div>
-        <p class="text-base font-semibold text-[#5A7184] w-[860px]">
+        <p class="text-base font-semibold text-[#5A7184] md:w-[860px]">
           © 2020 Wetick All Rights Reserved
         </p>
       </div>

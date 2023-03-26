@@ -24,251 +24,183 @@
         margin: 0;
         font-family: "Poppins", sans-serif;
       }
-      .bg {
-        background: #e9edc9;
-      }
-
-      /* Main Content */
-      .wrapper {
-        display: flex;
-        justify-content: center;
-        gap: 90px;
-        margin: 50px 120px 100px 120px;
-        background: white;
-        border-radius: 20px;
-        padding: 100px 0;
-      }
-
-      /* Left Content */
-      .banner-img {
-        border-radius: 30px;
-        overflow: hidden;
-        width: 300px;
-        height: 400px;
-        margin-bottom: 30px;
-      }
-      .banner-img > img {
-        width: 100%;
-        height: 100%;
-      }
-      .add-wishlist {
-        display: flex;
-        justify-content: center;
-        align-items: center;
-        font-size: 20px;
-        font-weight: 600;
-        gap: 17.32px;
-      }
-      .icon-addwish {
-        color: #c1c5d0;
-      }
-
-      /* Right Content */
-      .event-section {
-        width: 450px;
-      }
-      .event-text {
-        width: 233px;
-        height: 72px;
-        font-size: 24px;
-        font-weight: 600;
-        letter-spacing: 2px;
-        color: #373a42;
-        margin-bottom: 20px;
-      }
-      .event-desc {
-        display: flex;
-        justify-content: space-between;
-        margin-bottom: 20px;
-      }
-      .desc-section {
-        display: flex;
-        gap: 15px;
-      }
-      .icon-event {
-        color: #fc1055;
-      }
-      .attend-profile {
-        display: flex;
-        border-bottom: 1px solid #e0e4f3;
-        padding-bottom: 20px;
-        margin-bottom: 20px;
-      }
-      .attend-text {
-        font-size: 14px;
-        font-weight: 500;
-        margin-bottom: 11px;
-      }
-      .profile-picture {
-        width: 30px;
-        height: 30px;
-        border-radius: 20px;
-        overflow: hidden;
-        margin-left: -2px;
-      }
-      .profile-picture img {
-        object-fit: cover;
-        width: 100%;
-        height: 100%;
-      }
-      .linear-gradient {
-        position: absolute;
-        display: flex;
-        justify-content: center;
-        align-items: center;
-        width: 30px;
-        height: 30px;
-        background-color: #ff8900;
-        font-size: 10px;
-        opacity: 0.7;
-      }
-      .linear-gradient p {
-        color: #fff;
-      }
-      .relative {
-        position: relative;
-        display: flex;
-      }
-      .head {
-        font-size: 20px;
-        font-weight: 600;
-        color: #373a42;
-        margin-bottom: 20px;
-      }
-      .text-detail {
-        font-size: 12px;
-        font-weight: 400;
-        color: rgba(55, 58, 66, 0.75);
-        margin-bottom: 10px;
-      }
-      .read-more {
-        font-size: 12px;
-        font-weight: 500;
-        color: #61764b;
-        margin-bottom: 25px;
-      }
-      .maps {
-        margin-bottom: 50px;
-      }
-      .btn {
-        max-width: 315px;
-      }
-      .btn > a {
-        display: flex;
-        justify-content: center;
-        align-items: center;
-        height: 55px;
-        font-size: 16px;
-        font-weight: 600;
-        border-radius: 10px;
-        background-color: #61764b;
-        color: white;
-      }
     </style>
   </head>
   <body>
-    <div class="bg">
+    <div class="md:bg-[#E9EDC9]">
       <!-- Navbar Start -->
       <nav
-        class="flex justify-between items-center h-24 px-12 bg-white font-semibold"
+        class="flex md:flex-row flex-col md:h-24 px-8 bg-white font-semibold"
       >
         <div class="flex justify-center items-center text-2xl">
           <img src="/assets/logo.png" alt="logo" />
-          <span class="text-[#61764B]">We</span
-          ><span class="text-[#FF3D71]">tick</span>
+          <div class="text-2xl">
+            <a href="/index.html">
+              <span class="text-[#61764B]">We</span
+              ><span class="text-[#FF3D71]">tick</span>
+            </a>
+          </div>
         </div>
-        <div>
-          <ul class="flex gap-12 text-sm">
-            <li class="pb-2.5 text-[#61764B] border-b border-[#61764B]">
-              <a href="/index.html">Home</a>
+        <div
+          class="flex md:flex-row flex-col flex-1 md:pl-8 mb-5 md:mb-0 text-sm"
+        >
+          <ul class="flex justify-center md:flex-row flex-col flex-1 gap-3">
+            <li class="flex justify-center items-center min-w-[100px]">
+              <a
+                class="text-[#61764B] pb-2.5 border-b border-[#61764B]"
+                href="#home"
+                >Home</a
+              >
             </li>
-            <li
-              class="pb-2.5 border-b border-transparent hover:border-[#61764B]"
-            >
-              <a href="/create-event.html">Create Event</a>
+            <li class="flex justify-center items-center min-w-[100px]">
+              <a
+                class="hover:text-[#61764B] pb-2.5 border-b border-transparent hover:border-[#61764B]"
+                href="/create-event.html"
+                >Create Event</a
+              >
             </li>
-            <li
-              class="pb-2.5 border-b border-transparent hover:border-[#61764B]"
-            >
-              <a href="">Location</a>
+            <li class="flex justify-center items-center min-w-[100px]">
+              <a
+                class="hover:text-[#61764B] pb-2.5 border-b border-transparent hover:border-[#61764B]"
+                href="/event.html"
+                >Location</a
+              >
             </li>
           </ul>
-        </div>
-        <div class="flex items-center gap-3.5">
           <div
-            class="inline-block rounded-full p-[2px] bg-gradient-to-r from-[#61764B] to-[#A0D995]"
+            class="flex justify-center gap-3 items-center text-sm font-semibold"
           >
-            <img
-              class="w-11 h-11 object-cover rounded-full border-2 border-white"
-              src="/assets/profile3.jpg"
-              alt="Profile"
-            />
+            <div
+              class="inline-block rounded-full p-[2px] bg-gradient-to-r from-[#61764B] to-[#A0D995]"
+            >
+              <img
+                class="w-11 h-11 object-cover rounded-full border-2 border-white"
+                src="/assets/profile3.jpg"
+                alt="Profile"
+              />
+            </div>
+            <div>
+              <a href="/profile.html">John Tomson</a>
+            </div>
           </div>
-          <div>John Tomson</div>
         </div>
       </nav>
       <!-- Navbar End -->
       <!-- Main Content Start -->
-      <div class="wrapper">
+      <div
+        class="flex md:flex-row flex-col justify-center gap-20 md:mt-12 md:mx-[120px] md:mb-24 bg-white rounded-2xl md:py-24 py-5 relative"
+      >
         <!-- Left Content Start -->
-        <div class="event-banner">
-          <div class="banner-img">
-            <img src="/assets/event-banner.png" alt="Event Banner" />
+        <aside class="relative">
+          <div
+            class="rounded-3xl overflow-hidden md:w-[300px] h-[400px] mb-7 relative"
+          >
+            <img
+              class="w-full h-full object-cover"
+              src="/assets/event-banner.png"
+              alt="Event Banner"
+            />
+            <div
+              class="absolute w-full h-full bottom-0 bg-gradient-to-b from-[rgba(0,0,0,0.1)] to-[rgba(0,0,0,0.8)]"
+            ></div>
           </div>
-          <div class="add-wishlist">
-            <i class="icon-addwish" data-feather="heart"></i>
-            <div class="text-wishlist">Add to Wishlist</div>
+          <div
+            class="flex justify-center items-center text-xl font-semibold gap-4"
+          >
+            <i
+              class="md:static absolute top-24 right-5 text-[#C1C5D0]"
+              data-feather="heart"
+            ></i>
+            <div class="hidden md:block">Add to Wishlist</div>
           </div>
-        </div>
+        </aside>
         <!-- Left Content End -->
         <!-- Right Content Start -->
-        <div class="event-section">
-          <div class="event-date">
-            <p class="event-text">Sights & Sounds Exhibition</p>
-            <div class="event-desc">
-              <div class="desc-section">
-                <i class="icon-event" data-feather="map-pin"></i>
-                <p>Jakarta, Indonesia</p>
+        <div class="max-w-[450px] md:static absolute top-24">
+          <div class="md:mb-0 mb-32 md:pl-0 pl-3">
+            <p
+              class="max-w-[233px] max-h-[72px] text-2xl font-semibold tracking-widest md:text-[#373A42] text-white mb-5"
+            >
+              Sights & Sounds Exhibition
+            </p>
+            <div
+              class="flex md:flex-row flex-col justify-between gap-2 md:gap-0 mb-5"
+            >
+              <div class="flex gap-4">
+                <i class="text-[#FC1055]" data-feather="map-pin"></i>
+                <p class="md:text-[#373A42] text-white">Jakarta, Indonesia</p>
               </div>
-              <div class="desc-section">
-                <i class="icon-event" data-feather="clock"></i>
-                <p>Wed, 15 Nov, 4:00 PM</p>
+              <div class="flex gap-4">
+                <i class="text-[#FC1055]" data-feather="clock"></i>
+                <p class="md:text-[#373A42] text-white">Wed, 15 Nov, 4:00 PM</p>
               </div>
             </div>
             <div class="attendees">
-              <p class="attend-text">Attendees</p>
-              <div class="attend-profile">
-                <div class="profile-picture">
-                  <img src="/assets/profile1.jpg" alt="profile" />
+              <p
+                class="text-sm font-medium mb-2.5 md:text-[#373A42] text-white"
+              >
+                Attendees
+              </p>
+              <div class="flex md:border-b border-[#E0E4F3] pb-5 mb-5">
+                <div class="w-8 h-8 rounded-2xl overflow-hidden -ml-0.5">
+                  <img
+                    class="object-cover w-full h-full"
+                    src="/assets/profile1.jpg"
+                    alt="profile"
+                  />
                 </div>
-                <div class="profile-picture">
-                  <img src="/assets/profile2.jpg" alt="profile" />
+                <div class="w-8 h-8 rounded-2xl overflow-hidden -ml-0.5">
+                  <img
+                    class="object-cover w-full h-full"
+                    src="/assets/profile2.jpg"
+                    alt="profile"
+                  />
                 </div>
-                <div class="profile-picture">
-                  <img src="/assets/profile3.jpg" alt="profile" />
+                <div class="w-8 h-8 rounded-2xl overflow-hidden -ml-0.5">
+                  <img
+                    class="object-cover w-full h-full"
+                    src="/assets/profile3.jpg"
+                    alt="profile"
+                  />
                 </div>
-                <div class="profile-picture relative">
-                  <img src="/assets/profile4.jpg" alt="profile" />
-                  <div class="linear-gradient">
-                    <p>62+</p>
+                <div
+                  class="flex w-8 h-8 rounded-2xl overflow-hidden -ml-0.5 relative"
+                >
+                  <img
+                    class="object-cover w-full h-full"
+                    src="/assets/profile4.jpg"
+                    alt="profile"
+                  />
+                  <div
+                    class="flex justify-center items-center w-8 h-8 bg-[#FF8900] text-xs opacity-70 absolute"
+                  >
+                    <p class="text-white">62+</p>
                   </div>
                 </div>
               </div>
             </div>
           </div>
-          <div class="event-detail">
-            <p class="head">Event Detail</p>
-            <p class="text-detail">
-              After his controversial art exhibition "Tear and Consume" back in
-              November 2018, in which guests were invited to tear up…
-            </p>
-            <div class="read-more">
-              <a href="#">Read More</a>
-            </div>
-            <p class="head">Location</p>
-            <img class="maps" src="/assets/maps.png" alt="Maps" />
-            <div class="btn">
-              <a href="/booking.html">Buy Tickets</a>
+          <div class="md:pl-0 pl-3">
+            <div class="event-detail">
+              <p class="text-xl font-semibold text-[#373A42] mb-5">
+                Event Detail
+              </p>
+              <p class="text-xs text-[rgba(55, 58, 66, 0.75)] mb-2.5">
+                After his controversial art exhibition "Tear and Consume" back
+                in November 2018, in which guests were invited to tear up…
+              </p>
+              <div class="text-xs font-medium text-[#61764B] mb-6">
+                <a href="#">Read More</a>
+              </div>
+              <p class="text-xl font-semibold text-[#373A42] mb-5">Location</p>
+              <img class="mb-12" src="/assets/maps.png" alt="Maps" />
+              <div class="max-w-[315px]">
+                <a
+                  class="flex justify-center items-center h-14 text-base font-semibold rounded-lg shadow-lg shadow-[#61764B] bg-[#61764B] text-white"
+                  href="/booking.html"
+                  >Buy Tickets</a
+                >
+              </div>
             </div>
           </div>
         </div>
@@ -276,14 +208,22 @@
       </div>
       <!-- Main Content End -->
       <!-- Footer Start -->
-      <footer>
-        <div class="flex flex-col items-center gap-20 bg-[#E9EDC9]">
-          <div class="flex justify-center gap-32">
+      <footer class="py-24 md:mt-0 mt-96">
+        <div
+          class="flex flex-col md:items-center p-2.5 md:p-0 gap-12 md:gap-20 md:bg-[#E9EDC9]"
+        >
+          <div
+            class="flex md:flex-row flex-col md:justify-center gap-14 md:gap-32"
+          >
             <div>
-              <div class="flex items-center text-2xl mb-8 font-semibold">
+              <div
+                class="flex items-center text-2xl mb-4 md:mb-8 font-semibold"
+              >
                 <img src="/assets/logo.png" alt="logo" />
-                <span class="text-[#61764B]">We</span
-                ><span class="text-[#FF3D71]">tick</span>
+                <a href="/index.html">
+                  <span class="text-[#61764B]">We</span
+                  ><span class="text-[#FF3D71]">tick</span>
+                </a>
               </div>
               <div class="text-sm mb-4">Find events you love with our</div>
               <div class="flex gap-4 text-[#C1C5D0]">
@@ -304,34 +244,62 @@
             <div>
               <ul class="flex flex-col gap-4">
                 <li class="font-semibold">Wetick</li>
-                <li class="text-sm text-[#C1C5D0]">About Us</li>
-                <li class="text-sm text-[#C1C5D0]">Features</li>
-                <li class="text-sm text-[#C1C5D0]">Blog</li>
-                <li class="text-sm text-[#C1C5D0]">Payments</li>
-                <li class="text-sm text-[#C1C5D0]">Mobile App</li>
+                <li class="text-sm text-[#C1C5D0]">
+                  <a href="#">About Us</a>
+                </li>
+                <li class="text-sm text-[#C1C5D0]">
+                  <a href="#">Features</a>
+                </li>
+                <li class="text-sm text-[#C1C5D0]">
+                  <a href="#">Blog</a>
+                </li>
+                <li class="text-sm text-[#C1C5D0]">
+                  <a href="#">Payments</a>
+                </li>
+                <li class="text-sm text-[#C1C5D0]">
+                  <a href="#">Mobile App</a>
+                </li>
               </ul>
             </div>
             <div>
               <ul class="flex flex-col gap-4">
                 <li class="font-semibold">Features</li>
-                <li class="text-sm text-[#C1C5D0]">Booking</li>
-                <li class="text-sm text-[#C1C5D0]">Create Event</li>
-                <li class="text-sm text-[#C1C5D0]">Discover</li>
-                <li class="text-sm text-[#C1C5D0]">Register</li>
+                <li class="text-sm text-[#C1C5D0]">
+                  <a href="#">Booking</a>
+                </li>
+                <li class="text-sm text-[#C1C5D0]">
+                  <a href="#">Create Event</a>
+                </li>
+                <li class="text-sm text-[#C1C5D0]">
+                  <a href="#">Discover</a>
+                </li>
+                <li class="text-sm text-[#C1C5D0]">
+                  <a href="#">Register</a>
+                </li>
               </ul>
             </div>
             <div>
               <ul class="flex flex-col gap-4">
                 <li class="font-semibold">Company</li>
-                <li class="text-sm text-[#C1C5D0]">Partnership</li>
-                <li class="text-sm text-[#C1C5D0]">Help</li>
-                <li class="text-sm text-[#C1C5D0]">Term of Service</li>
-                <li class="text-sm text-[#C1C5D0]">Privacy Policy</li>
-                <li class="text-sm text-[#C1C5D0]">Sitemap</li>
+                <li class="text-sm text-[#C1C5D0]">
+                  <a href="#">Partnership</a>
+                </li>
+                <li class="text-sm text-[#C1C5D0]">
+                  <a href="#">Help</a>
+                </li>
+                <li class="text-sm text-[#C1C5D0]">
+                  <a href="#">Term of Service</a>
+                </li>
+                <li class="text-sm text-[#C1C5D0]">
+                  <a href="#">Privacy Policy</a>
+                </li>
+                <li class="text-sm text-[#C1C5D0]">
+                  <a href="#">Sitemap</a>
+                </li>
               </ul>
             </div>
           </div>
-          <p class="text-base font-semibold text-[#5A7184] w-[860px]">
+          <p class="text-base font-semibold text-[#5A7184] md:w-[860px]">
             © 2020 Wetick All Rights Reserved
           </p>
         </div>

@@ -1,0 +1,387 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Detail Event</title>
+
+    <!-- Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Poppins:wght@400&display=swap"
+      rel="stylesheet"
+    />
+    <script src="https://cdn.tailwindcss.com"></script>
+
+    <!-- Feather Icons -->
+    <script src="https://unpkg.com/feather-icons"></script>
+
+    <!-- Manual Styling -->
+    <style>
+      body {
+        font-family: "Poppins", sans-serif;
+      }
+    </style>
+  </head>
+  <body class="relative">
+    <div
+      class="absolute w-full min-h-screen h-full bg-[rgba(0,0,0,0.5)] flex justify-center items-center"
+    >
+      <div class="bg-white min-w-[80%] min-h-[200px] rounded-xl p-10">
+        <div class="mb-11 text-xl tracking-wider font-semibold">
+          Detail Event
+        </div>
+        <div class="flex justify-between gap-16">
+          <div class="w-[481px]">
+            <div class="mb-2">Name</div>
+            <div>
+              <input
+                type="text"
+                class="w-full h-14 px-5 py-4 mb-8 border rounded-xl border-[#C1C5D0]"
+                placeholder="Input Name Event ..."
+              />
+            </div>
+            <div class="mb-2">Location</div>
+            <div>
+              <input
+                type="text"
+                class="w-full h-14 px-5 py-4 mb-8 border rounded-xl border-[#C1C5D0]"
+                placeholder="Select Location"
+              />
+            </div>
+            <div class="mb-2">Price</div>
+            <div>
+              <input
+                type="text"
+                class="w-full h-14 px-5 py-4 mb-8 border rounded-xl border-[#C1C5D0]"
+                placeholder="Input Price"
+              />
+            </div>
+          </div>
+          <div class="w-[481px]">
+            <div class="mb-2">Category</div>
+            <div>
+              <input
+                type="text"
+                class="w-full h-14 px-5 py-4 mb-8 border rounded-xl border-[#C1C5D0]"
+                placeholder="Select Category"
+              />
+            </div>
+            <div class="mb-2">Date Time Show</div>
+            <div>
+              <input
+                type="text"
+                class="w-full h-14 px-5 py-4 mb-8 border rounded-xl border-[#C1C5D0]"
+                placeholder="01/01/2022"
+              />
+            </div>
+            <div class="mb-2">Image</div>
+            <div>
+              <input
+                type="text"
+                class="w-full h-14 px-5 py-4 mb-8 border rounded-xl border-[#C1C5D0]"
+                placeholder="Choose File ..."
+              />
+            </div>
+          </div>
+        </div>
+        <div class="mb-2">Detail</div>
+        <div>
+          <input
+            type="text"
+            class="w-full h-14 px-5 pt-5 pb-12 mb-8 border rounded-xl border-[#C1C5D0]"
+            placeholder="Input Detail ..."
+          />
+        </div>
+        <div class="flex justify-end">
+          <a
+            class="flex justify-center items-center min-w-[315px] h-12 rounded-xl text-white bg-[#61764B]"
+            href="/manage-event.html"
+            >Save</a
+          >
+        </div>
+      </div>
+    </div>
+    <!-- Navbar Start -->
+    <nav class="flex justify-between items-center h-24 px-12 font-semibold">
+      <div class="flex justify-center items-center text-2xl">
+        <img src="/assets/logo.png" alt="logo" />
+        <span class="text-[#61764B]">We</span
+        ><span class="text-[#FF3D71]">tick</span>
+      </div>
+      <div>
+        <ul class="flex gap-12 text-sm">
+          <li>Home</li>
+          <li>Create Event</li>
+          <li>Location</li>
+        </ul>
+      </div>
+      <div class="flex items-center gap-3.5">
+        <div
+          class="inline-block rounded-full p-[2px] bg-gradient-to-r from-[#61764B] to-[#A0D995]"
+        >
+          <img
+            class="w-11 h-11 object-cover rounded-full border-2 border-white"
+            src="/assets/profile3.jpg"
+            alt="Profile"
+          />
+        </div>
+        <div>John Tomson</div>
+      </div>
+    </nav>
+    <!-- Navbar End -->
+    <!-- Main Content Start -->
+    <main class="flex pb-[100px] pt-12 bg-[#E9EDC9]">
+      <!-- Left Content Start -->
+      <aside class="w-60 mx-16">
+        <div class="flex gap-3.5 mb-14">
+          <div class="flex gap-3.5">
+            <div
+              class="inline-block rounded-full p-[2px] bg-gradient-to-r from-[#61764B] to-[#A0D995]"
+            >
+              <img
+                class="w-11 h-11 object-cover rounded-full border-2 border-white"
+                src="/assets/profile3.jpg"
+                alt="Profile"
+              />
+            </div>
+          </div>
+          <div class="flex flex-col justify-between">
+            <div class="text-sm font-semibold">Jhon Tomson</div>
+            <div class="text-xs">Entrepreneur, ID</div>
+          </div>
+        </div>
+        <ul class="text-sm font-semibold">
+          <li class="flex gap-7 mb-8">
+            <i class="text-[#C1C5D0]" data-feather="user"></i>Profile
+          </li>
+          <li>
+            <ul class="ml-12">
+              <li class="flex gap-7 mb-8 relative">
+                <i class="text-[#C1C5D0]" data-feather="credit-card"></i>Card
+                <div class="absolute w-28 border border-black top-2"></div>
+              </li>
+              <li class="flex gap-7 mb-8">
+                <i class="text-[#C1C5D0]" data-feather="edit-3"></i>Edit Profile
+              </li>
+              <li class="flex gap-7 mb-8">
+                <i class="text-[#C1C5D0]" data-feather="lock"></i>Change
+                Password
+              </li>
+            </ul>
+          </li>
+          <li class="flex gap-7 mb-8 text-[#61764B]">
+            <i data-feather="plus-circle"></i>Create Event
+          </li>
+          <li class="flex gap-7 mb-8">
+            <i class="text-[#C1C5D0]" data-feather="list"></i>My Booking
+          </li>
+          <li class="flex gap-7 mb-8">
+            <i class="text-[#C1C5D0]" data-feather="heart"></i>My Wishlist
+          </li>
+          <li class="flex gap-7 mb-8">
+            <i class="text-[#C1C5D0]" data-feather="settings"></i>Settings
+          </li>
+          <li class="flex gap-7 mb-8 text-[#F03800]">
+            <i data-feather="log-out"></i>Logout
+          </li>
+        </ul>
+      </aside>
+      <!-- Left Content End -->
+      <!-- Right Content Start -->
+      <div class="flex-1">
+        <div class="bg-white h-[825px] px-12 py-11 rounded-2xl mr-16">
+          <div class="flex justify-between">
+            <div class="text-xl font-semibold tracking-wide mb-12">
+              Manage Event
+            </div>
+            <button class="w-[125px] h-[50px] text-xs rounded-2xl bg-[#E9EDC9]">
+              Create
+            </button>
+          </div>
+          <div class="flex flex-col gap-6">
+            <div>
+              <div class="flex">
+                <div class="flex flex-col items-center mr-8">
+                  <p class="text-sm text-[#FF8900] pt-3">15</p>
+                  <p class="text-xs">Wed</p>
+                </div>
+                <div class="grow">
+                  <div>
+                    <p class="text-2xl font-semibold mb-4 tracking-widest">
+                      Sights & Sounds Exhibition
+                    </p>
+                    <p class="text-xs mb-2">Jakarta, Indonesia</p>
+                    <p class="text-xs mb-2">Wed, 15 Nov, 4:00 PM</p>
+                    <div class="flex gap-3.5 text-xs text-[#61764B]">
+                      <a href="#">Detail</a>
+                      <a href="#">Update</a>
+                      <a href="#">Delete</a>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div>
+              <div class="flex">
+                <div class="flex flex-col items-center mr-8">
+                  <p class="text-sm text-[#FF8900] pt-3">15</p>
+                  <p class="text-xs">Wed</p>
+                </div>
+                <div class="grow border-t">
+                  <div>
+                    <p class="text-2xl font-semibold mb-4 tracking-widest">
+                      Sights & Sounds Exhibition
+                    </p>
+                    <p class="text-xs mb-2">Jakarta, Indonesia</p>
+                    <p class="text-xs mb-2">Wed, 15 Nov, 4:00 PM</p>
+                    <div class="flex gap-3.5 text-xs text-[#61764B]">
+                      <a href="#">Detail</a>
+                      <a href="#">Update</a>
+                      <a href="#">Delete</a>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div>
+              <div class="flex">
+                <div class="flex flex-col items-center mr-8">
+                  <p class="text-sm text-[#FF8900] pt-3">15</p>
+                  <p class="text-xs">Wed</p>
+                </div>
+                <div class="grow border-t">
+                  <div>
+                    <p class="text-2xl font-semibold mb-4 tracking-widest">
+                      Sights & Sounds Exhibition
+                    </p>
+                    <p class="text-xs mb-2">Jakarta, Indonesia</p>
+                    <p class="text-xs mb-2">Wed, 15 Nov, 4:00 PM</p>
+                    <div class="flex gap-3.5 text-xs text-[#61764B]">
+                      <a href="#">Detail</a>
+                      <a href="#">Update</a>
+                      <a href="#">Delete</a>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div>
+              <div class="flex">
+                <div class="flex flex-col items-center mr-8">
+                  <p class="text-sm text-[#FF8900] pt-3">15</p>
+                  <p class="text-xs">Wed</p>
+                </div>
+                <div class="grow border-t">
+                  <div>
+                    <p class="text-2xl font-semibold mb-4 tracking-widest">
+                      Sights & Sounds Exhibition
+                    </p>
+                    <p class="text-xs mb-2">Jakarta, Indonesia</p>
+                    <p class="text-xs mb-2">Wed, 15 Nov, 4:00 PM</p>
+                    <div class="flex gap-3.5 text-xs text-[#61764B]">
+                      <a href="#">Detail</a>
+                      <a href="#">Update</a>
+                      <a href="#">Delete</a>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div>
+              <div class="flex">
+                <div class="flex flex-col items-center mr-8">
+                  <p class="text-sm text-[#FF8900] pt-3">15</p>
+                  <p class="text-xs">Wed</p>
+                </div>
+                <div class="grow border-t">
+                  <div>
+                    <p class="text-2xl font-semibold mb-4 tracking-widest">
+                      Sights & Sounds Exhibition
+                    </p>
+                    <p class="text-xs mb-2">Jakarta, Indonesia</p>
+                    <p class="text-xs mb-2">Wed, 15 Nov, 4:00 PM</p>
+                    <div class="flex gap-3.5 text-xs text-[#61764B]">
+                      <a href="#">Detail</a>
+                      <a href="#">Update</a>
+                      <a href="#">Delete</a>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <!-- Right Content End -->
+    </main>
+    <!-- Main Content End -->
+    <!-- Footer Start -->
+    <footer>
+      <div class="flex flex-col items-center gap-20 bg-[#E9EDC9]">
+        <div class="flex justify-center gap-32">
+          <div>
+            <div class="flex items-center text-2xl mb-8 font-semibold">
+              <img src="/assets/logo.png" alt="logo" />
+              <span class="text-[#61764B]">We</span
+              ><span class="text-[#FF3D71]">tick</span>
+            </div>
+            <div class="text-sm mb-4">Find events you love with our</div>
+            <div class="flex gap-4 text-[#C1C5D0]">
+              <a href="https://www.facebook.com">
+                <i data-feather="facebook"></i>
+              </a>
+              <a href="https://www.whatsapp.com">
+                <img src="/assets/whatsapp.png" alt="Whatsapp Icon" />
+              </a>
+              <a href="https://www.instagram.com">
+                <i data-feather="instagram"></i>
+              </a>
+              <a href="https://www.twitter.com">
+                <i data-feather="twitter"></i>
+              </a>
+            </div>
+          </div>
+          <div>
+            <ul class="flex flex-col gap-4">
+              <li class="font-semibold">Wetick</li>
+              <li class="text-sm text-[#C1C5D0]">About Us</li>
+              <li class="text-sm text-[#C1C5D0]">Features</li>
+              <li class="text-sm text-[#C1C5D0]">Blog</li>
+              <li class="text-sm text-[#C1C5D0]">Payments</li>
+              <li class="text-sm text-[#C1C5D0]">Mobile App</li>
+            </ul>
+          </div>
+          <div>
+            <ul class="flex flex-col gap-4">
+              <li class="font-semibold">Features</li>
+              <li class="text-sm text-[#C1C5D0]">Booking</li>
+              <li class="text-sm text-[#C1C5D0]">Create Event</li>
+              <li class="text-sm text-[#C1C5D0]">Discover</li>
+              <li class="text-sm text-[#C1C5D0]">Register</li>
+            </ul>
+          </div>
+          <div>
+            <ul class="flex flex-col gap-4">
+              <li class="font-semibold">Company</li>
+              <li class="text-sm text-[#C1C5D0]">Partnership</li>
+              <li class="text-sm text-[#C1C5D0]">Help</li>
+              <li class="text-sm text-[#C1C5D0]">Term of Service</li>
+              <li class="text-sm text-[#C1C5D0]">Privacy Policy</li>
+              <li class="text-sm text-[#C1C5D0]">Sitemap</li>
+            </ul>
+          </div>
+        </div>
+        <p class="text-base font-semibold text-[#5A7184] w-[860px]">
+          © 2020 Wetick All Rights Reserved
+        </p>
+      </div>
+    </footer>
+    <!-- Footer End -->
+    <script>
+      feather.replace();
+    </script>
+  </body>
+</html>
